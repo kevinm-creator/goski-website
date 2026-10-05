@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GoSki: Snow reports, trail maps and ski day tracking</title>
+  <meta name="description" content="Snow reports and forecasts for 40+ ski resorts across the U.S. and Canada, trail maps in 2D and 3D, and a record of every run you ski. GoSki is free on the App Store.">
+  <meta name="theme-color" content="#020617">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-itunes-app" content="app-id=6759206548">
+  <link rel="canonical" href="https://goskiapp.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goskiapp.com/">
+  <meta property="og:site_name" content="GoSki">
+  <meta property="og:title" content="GoSki: Plan it. Ski it. Relive it.">
+  <meta property="og:description" content="Snow reports and forecasts for 40+ resorts, trail maps in 2D and 3D, and a record of every run you ski.">
+  <meta property="og:image" content="https://goskiapp.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GoSki on three iPhones: a snowfall map, a 3D trail map of Killington and a live ski day.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "GoSki: Resorts",
+    "operatingSystem": "iOS 15.0 or later",
+    "applicationCategory": "SportsApplication",
+    "description": "Snow reports, forecasts and trail maps for ski resorts across the U.S. and Canada, with ski day recording.",
+    "url": "https://goskiapp.com/",
+    "downloadUrl": "https://apps.apple.com/us/app/goski-resorts/id6759206548",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icons: simple line icons in the style the app uses (adapted from Lucide, ISC license; see third-party-licenses.txt). -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-snowflake" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20m8-6-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></symbol>
+    <symbol id="i-cloud-snow" viewBox="0 0 24 24"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.24M8 15h.01M8 19h.01M12 17h.01M12 21h.01M16 15h.01M16 19h.01"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5M12 7v5l4 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-toggle" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="6"/><circle cx="16" cy="12" r="2.4"/></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.8 5.41a2 2 0 0 1-1.27 1.27l-5.41 1.8 1.8-5.41a2 2 0 0 1 1.27-1.27z"/></symbol>
+    <symbol id="i-mug" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5l-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M7 12h.01M12 12h.01M17 12h.01"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49M14.08 14.16a3 3 0 0 1-4.24-4.24M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14M2 2l20 20"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <!-- Trail ratings, as on the app's map key. -->
+    <symbol id="r-green" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="#22c55e"/></symbol>
+    <symbol id="r-blue" viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="1.5" fill="#3b82f6"/></symbol>
+    <symbol id="r-black" viewBox="0 0 20 20"><path d="M10 1.2 18.8 10 10 18.8 1.2 10Z" fill="#020617" stroke="#e2e8f0" stroke-width="1.4"/></symbol>
+  </svg>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="GoSki, back to top">
+        <img src="assets/icon/icon-64.png" width="32" height="32" alt="">
+        <span>GoSki</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav__links">
+          <li><a href="#plan">Plan</a></li>
+          <li><a href="#ski">Ski</a></li>
+          <li><a href="#relive">Relive</a></li>
+          <li><a href="#pass">GoSki Pass</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--sm" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">Get the app</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- The page's ski track: drawn down the page as you scroll (wide screens only). -->
+    <svg class="track" aria-hidden="true" focusable="false" data-track>
+      <defs>
+        <linearGradient id="track-fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e2e8f0" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#60a5fa" stop-opacity=".55"/>
+        </linearGradient>
+        <radialGradient id="dot-glow"><stop offset="0" stop-color="#3b82f6" stop-opacity=".55"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path class="track__groove" d=""/>
+      <path class="track__line" d=""/>
+      <circle class="track__glow" r="22" fill="url(#dot-glow)"/>
+      <circle class="track__dot" r="6"/>
+    </svg>
+
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__sky" aria-hidden="true"></div>
+      <canvas class="hero__snow" aria-hidden="true" data-snow></canvas>
+
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="pill"><svg class="pill__star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg>Free for iPhone and iPad</p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><svg class="rate" aria-hidden="true"><use href="#r-green"/></svg>Plan it.</span>
+            <span class="line"><svg class="rate" aria-hidden="true"><use href="#r-blue"/></svg>Ski it.</span>
+            <span class="line"><svg class="rate" aria-hidden="true"><use href="#r-black"/></svg>Relive it.</span>
+          </h1>
+          <p class="hero__lead">Snow reports and forecasts for 40+ resorts across the U.S. and Canada, trail maps in 2D and 3D, and with GoSki Pass, a record of every run you ski.</p>
+          <div class="hero__cta">
+            <a class="store-badge" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">
+              <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?size=250x83" width="156" height="52" alt="Download on the App Store">
+            </a>
+            <a class="link-quiet" href="#plan">See how it works <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero__phones" aria-label="GoSki screens">
+          <figure class="phone phone--side phone--left" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/explore.webp" width="720" height="1561" alt="Explore: a snowfall map of the Northeast above favorite resorts Killington, Stowe and Sugarbush with recent and forecast snow." fetchpriority="high">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+          <figure class="phone phone--center" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/map-2d.webp" width="720" height="1561" alt="Killington's trail map in 3D with trails, lifts, lodges and a search box." fetchpriority="high">
+              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+          <figure class="phone phone--side phone--right" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/session.webp" width="720" height="1561" alt="A live ski day at Killington: 20,736 feet of downhill vertical, 16 runs and 24.6 miles." fetchpriority="high">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="hero__land" aria-hidden="true">
+        <svg viewBox="-480 0 2400 380">
+          <defs>
+            <linearGradient id="far" x1="0" y1="120" x2="0" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3a5a82"/><stop offset=".4" stop-color="#1b3a63"/><stop offset="1" stop-color="#0b1d3d"/></linearGradient>
+            <linearGradient id="mid" x1="0" y1="40" x2="0" y2="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f1f5f9"/><stop offset=".2" stop-color="#9fb3cc"/><stop offset=".46" stop-color="#1d3a60"/><stop offset="1" stop-color="#081a38"/></linearGradient>
+            <linearGradient id="slope" x1="0" y1="290" x2="0" y2="380" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#27466e"/><stop offset=".5" stop-color="#11223f"/><stop offset="1" stop-color="#020617"/></linearGradient>
+            <linearGradient id="swoosh" x1="60" y1="0" x2="760" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f8fafc" stop-opacity="0"/><stop offset=".3" stop-color="#f8fafc" stop-opacity=".85"/><stop offset="1" stop-color="#bfdbfe"/></linearGradient>
+          </defs>
+          <path fill="url(#far)" d="M-480 380L-480 196.0L-471 191.2L-463 188.7L-454 187.0L-446 185.3L-437 180.3L-429 177.3L-420 176.0L-411 176.7L-403 180.4L-394 179.8L-386 183.8L-377 185.2L-369 184.9L-360 188.0L-351 184.1L-343 179.8L-334 175.6L-326 174.1L-317 166.3L-309 162.0L-300 160.0L-291 160.3L-283 156.8L-274 154.6L-266 153.6L-257 152.3L-249 153.2L-240 150.0L-232 152.2L-223 155.5L-215 160.3L-207 163.5L-198 168.5L-190 170.0L-181 173.0L-173 172.9L-164 174.0L-156 178.2L-147 180.5L-139 178.5L-130 182.0L-121 185.5L-113 188.6L-104 190.3L-96 191.2L-87 196.0L-79 198.3L-70 200.0L-61 200.3L-52 203.6L-44 203.4L-35 204.2L-26 206.9L-18 208.4L-9 210.1L0 212.0L9 209.6L18 206.9L26 205.9L35 206.1L44 204.7L52 201.0L61 200.9L70 198.0L78 196.1L87 192.8L95 189.6L103 187.0L112 182.5L120 180.0L128 182.3L136 182.4L144 184.7L152 187.4L160 188.0L168 184.5L177 178.5L185 176.8L193 171.3L202 166.7L210 162.0L218 162.2L226 166.2L234 167.1L242 170.6L250 172.0L258 166.8L267 163.4L275 157.6L283 153.3L292 146.3L300 142.0L308 144.9L316 147.7L324 150.4L332 151.0L340 154.0L348 158.7L357 162.1L365 164.7L373 169.2L382 172.5L390 174.0L399 175.8L407 177.5L416 177.9L424 182.2L433 184.3L441 184.2L450 186.0L459 186.0L468 185.3L476 184.6L485 181.7L494 183.3L502 181.8L511 181.4L520 180.0L528 178.7L536 178.4L544 178.0L552 176.5L560 175.8L568 172.3L576 171.8L584 171.8L592 171.5L600 170.0L609 169.8L617 172.4L626 173.1L634 171.7L643 174.2L651 174.1L660 176.0L668 173.2L676 172.3L684 171.7L692 170.1L700 170.0L709 165.6L717 161.8L726 160.4L734 156.9L743 154.7L751 151.5L760 148.0L768 149.0L776 153.5L784 152.2L792 155.7L800 158.0L808 152.1L817 147.6L825 141.4L833 139.4L842 132.5L850 128.0L858 128.3L867 132.4L875 132.5L883 136.2L892 137.4L900 140.0L908 136.7L916 134.6L924 130.4L932 125.3L940 122.0L948 128.5L956 133.0L964 137.1L972 141.3L980 148.0L988 151.7L997 154.9L1005 159.8L1013 163.2L1022 165.1L1030 168.0L1038 169.4L1047 173.5L1055 172.1L1063 174.5L1072 178.2L1080 180.0L1088 179.1L1097 176.0L1105 176.5L1113 176.1L1122 172.9L1130 172.0L1138 169.7L1147 167.0L1155 165.2L1163 165.8L1172 161.5L1180 160.0L1188 163.4L1197 164.9L1205 165.4L1213 165.8L1222 170.1L1230 170.0L1238 167.7L1247 165.0L1255 162.3L1263 162.5L1272 158.3L1280 156.0L1288 153.5L1297 152.6L1305 149.6L1313 149.8L1322 147.5L1330 146.0L1338 148.5L1347 153.8L1355 157.3L1363 157.4L1372 162.8L1380 166.0L1389 164.0L1397 165.4L1406 163.6L1414 160.5L1423 159.4L1431 157.8L1440 158.0L1449 158.1L1457 160.3L1466 162.4L1474 166.4L1483 166.6L1491 169.1L1500 170.0L1509 164.9L1517 163.2L1526 161.1L1534 156.4L1543 154.7L1551 151.0L1560 146.0L1568 146.9L1577 146.8L1585 150.9L1593 149.9L1602 150.8L1610 154.0L1618 151.3L1627 148.0L1635 144.3L1643 141.1L1652 134.5L1660 132.0L1669 132.9L1677 135.6L1686 141.6L1694 140.8L1703 143.5L1711 145.5L1720 150.0L1729 151.3L1737 154.4L1746 158.8L1754 161.2L1763 164.9L1771 170.6L1780 172.0L1789 169.0L1797 169.8L1806 167.8L1814 165.4L1823 163.7L1831 162.8L1840 160.0L1848 162.7L1856 163.8L1864 166.6L1872 168.7L1880 171.6L1888 176.2L1896 176.5L1904 177.6L1912 181.5L1920 184.0L1920 380Z"/>
+          <path fill="url(#mid)" d="M-480 380L-480 250.0L-473 248.3L-466 246.5L-459 245.2L-451 241.1L-444 240.6L-437 239.5L-430 236.0L-423 234.5L-416 228.4L-409 227.2L-401 223.9L-394 220.3L-387 219.1L-380 214.0L-373 210.1L-366 205.8L-359 203.9L-351 198.6L-344 193.1L-337 189.2L-330 186.0L-322 182.0L-315 176.0L-308 174.5L-300 170.0L-292 173.5L-285 174.7L-278 178.9L-270 180.0L-262 187.4L-254 190.7L-246 196.5L-238 198.9L-230 206.0L-223 207.6L-216 214.9L-209 215.4L-201 218.5L-194 224.8L-187 227.6L-180 230.0L-172 230.2L-165 232.8L-158 234.2L-150 236.1L-142 236.7L-135 240.6L-128 241.5L-120 244.0L-112 245.1L-105 245.7L-98 246.9L-90 248.1L-82 253.0L-75 254.0L-68 254.7L-60 256.0L-52 255.3L-45 256.1L-38 256.7L-30 258.3L-22 258.0L-15 259.6L-8 260.1L0 262.0L8 261.0L15 260.0L22 258.7L30 257.8L38 255.5L45 254.7L52 249.6L60 250.0L68 248.1L75 248.3L82 245.4L90 244.6L98 239.7L105 239.4L112 236.7L120 236.0L127 233.9L134 231.7L141 227.2L149 225.7L156 223.7L163 223.9L170 220.0L178 222.7L186 221.7L194 226.1L202 224.8L210 228.0L217 230.2L224 230.0L231 231.2L239 236.3L246 235.4L253 237.2L260 240.0L268 241.2L276 240.0L284 236.7L292 238.8L300 236.0L308 233.0L316 230.4L324 225.1L332 225.2L340 220.0L348 216.5L356 213.4L364 208.7L372 201.4L380 198.0L388 192.1L396 185.9L404 180.6L412 175.0L420 172.0L428 166.6L435 163.5L442 156.2L450 154.0L460 157.0L470 158.0L478 150.6L485 143.9L492 140.1L500 131.9L510 125.1L520 118.6L528 110.7L537 104.8L545 98.1L552 93.1L560 86.0L572 94.5L580 96.6L588 102.9L595 102.3L602 98.1L610 101.1L618 108.9L625 114.9L633 120.2L640 123.4L647 125.6L654 133.1L661 135.5L668 140.3L676 146.2L684 148.7L692 154.3L700 162.0L708 166.8L715 177.4L722 179.9L730 188.0L738 195.3L745 202.2L752 208.2L760 212.0L768 216.7L775 222.3L782 228.6L790 234.0L798 238.5L806 238.6L814 244.7L822 248.2L830 250.0L838 253.1L846 251.2L854 256.7L862 254.6L870 258.0L878 256.1L886 256.1L894 256.2L902 252.5L910 252.0L918 252.6L926 249.8L934 247.6L942 246.4L950 246.0L958 241.8L966 238.5L974 236.0L982 235.6L990 232.0L998 229.6L1006 220.7L1014 215.4L1022 215.2L1030 208.0L1038 204.2L1045 199.6L1052 194.8L1060 192.0L1068 187.0L1075 182.6L1082 175.3L1090 170.0L1098 162.6L1105 153.6L1112 151.3L1120 142.0L1128 134.2L1135 131.0L1142 127.2L1150 120.0L1159 110.5L1167 106.7L1176 98.0L1186 92.2L1196 80.0L1203 75.6L1210 70.0L1217 78.5L1224 84.0L1232 79.2L1240 78.0L1247 85.0L1255 90.7L1262 100.0L1269 108.2L1276 112.0L1283 119.3L1290 126.0L1298 135.1L1305 140.8L1312 148.0L1320 152.0L1328 158.7L1335 165.9L1342 174.2L1350 180.0L1358 186.4L1365 191.9L1372 199.0L1380 206.0L1388 209.3L1395 215.4L1402 223.3L1410 226.0L1418 230.4L1425 231.5L1432 233.5L1440 236.0L1447 234.7L1454 233.5L1461 233.0L1469 231.8L1476 230.3L1483 226.9L1490 226.0L1497 224.7L1504 219.4L1511 215.8L1519 211.8L1526 210.3L1533 205.7L1540 204.0L1547 199.0L1554 196.5L1561 193.2L1569 189.1L1576 182.2L1583 178.1L1590 176.0L1598 169.6L1606 165.9L1614 162.1L1622 156.7L1630 150.0L1638 147.6L1646 141.4L1654 137.2L1662 132.0L1669 134.6L1676 138.2L1683 141.3L1690 146.0L1698 152.2L1706 158.6L1714 164.4L1722 169.4L1730 176.0L1737 180.0L1744 183.5L1751 190.2L1759 193.5L1766 198.5L1773 203.1L1780 206.0L1788 207.8L1795 209.9L1802 213.3L1810 218.7L1818 221.0L1825 222.1L1832 226.4L1840 228.0L1847 228.5L1855 231.6L1862 229.7L1869 233.3L1876 235.3L1884 234.2L1891 235.5L1898 235.3L1905 236.9L1913 237.9L1920 240.0L1920 380Z"/>
+          <path fill="#051c3c" opacity=".6" d="M560 86.0L572 94.5L580 96.6L588 102.9L595 102.3L602 98.1L610 101.1L618 108.9L625 114.9L633 120.2L640 123.4L647 125.6L654 133.1L661 135.5L668 140.3L676 146.2L684 148.7L692 154.3L700 162.0L708 166.8L715 177.4L722 179.9L730 188.0L738 195.3L745 202.2L752 208.2L760 212.0L768 216.7L775 222.3L782 228.6L790 234.0L798 238.5L806 238.6L814 244.7L822 248.2L830 250.0L700 250.0L640 212.0L606 158.0L578 118.0Z"/>
+          <path fill="#051c3c" opacity=".6" d="M1210 70.0L1217 78.5L1224 84.0L1232 79.2L1240 78.0L1247 85.0L1255 90.7L1262 100.0L1269 108.2L1276 112.0L1283 119.3L1290 126.0L1298 135.1L1305 140.8L1312 148.0L1320 152.0L1328 158.7L1335 165.9L1342 174.2L1350 180.0L1358 186.4L1365 191.9L1372 199.0L1380 206.0L1388 209.3L1395 215.4L1402 223.3L1410 226.0L1330 236.0L1270 190.0L1236 130.0L1216 96.0Z"/>
+          <path fill="url(#slope)" d="M-480 318C-260 300-120 312 0 312 220 292 470 290 700 304s470 22 740-12c180-14 320-6 480 4V380H-480Z"/>
+          <path fill="none" stroke="#e2e8f0" stroke-opacity=".22" stroke-width="1.5" d="M-480 318C-260 300-120 312 0 312 220 292 470 290 700 304s470 22 740-12c180-14 320-6 480 4"/>
+          <path class="hero__swoosh" fill="url(#swoosh)" d="M60 322C300 313 560 326 752 343L756 353C560 333 300 318 60 325Z"/>
+          <circle class="hero__dot-glow" cx="766" cy="349" r="26" fill="#3b82f6" opacity=".35"/>
+          <circle class="hero__dot" cx="766" cy="349" r="9" fill="#3b82f6"/>
+        </svg>
+      </div>
+      <p class="hero__note">App screens show sample winter conditions.</p>
+    </section>
+
+    <section class="resorts" aria-label="Resorts in GoSki">
+      <p class="eyebrow eyebrow--center">40+ resorts across the U.S. and Canada</p>
+      <div class="marquee" data-marquee>
+        <ul class="marquee__row">
+          <li>Killington</li><li>Whistler Blackcomb</li><li>Palisades Tahoe</li><li>Stowe</li><li>Jackson Hole</li><li>Lake Louise</li><li>Vail</li><li>Sugarloaf</li><li>Revelstoke</li><li>Mammoth Mountain</li><li>Sunday River</li><li>Banff Sunshine</li><li>Park City</li><li>Sugarbush</li><li>Heavenly</li><li>Kicking Horse</li><li>Breckenridge</li><li>Jay Peak</li><li>Northstar</li><li>Fernie</li><li>Aspen Snowmass</li><li>Okemo</li><li>Kirkwood</li><li>Sun Peaks</li><li>Steamboat</li><li>Stratton</li><li>Stevens Pass</li><li>Big White</li><li>Beaver Creek</li><li>Mount Snow</li><li>Crested Butte</li><li>SilverStar</li><li>Keystone</li><li>Hunter Mountain</li><li>RED Mountain</li><li>Attitash</li><li>Panorama</li><li>Wildcat</li><li>Mt. Norquay</li><li>Mount Sunapee</li><li>Magic Mountain</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chapter" id="plan" aria-labelledby="plan-title">
+      <div class="chapter__inner">
+        <div class="chapter__copy" data-reveal>
+          <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-green"/></svg>Plan it</p>
+          <h2 id="plan-title">Know where it snowed, and where it&rsquo;s about to.</h2>
+          <p class="lead">Snow in the last 48 hours, snow in the next 48, lifts and trails open: GoSki lines up the numbers that matter for every resort, with your favorites on top. Switch the map to NOAA&rsquo;s snowfall analysis to see where the storm actually landed.</p>
+          <ul class="features">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"/></svg><div><h3>Morning reports</h3><p>Each resort&rsquo;s own report: new snow, base depth, season total and surface.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-cloud-snow"/></svg><div><h3>Hour by hour</h3><p>Snow, temperature and wind from National Weather Service forecasts, out to seven days with GoSki Pass.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-history"/></svg><div><h3>Past seasons</h3><p>See how this winter stacks up against previous seasons&rsquo; snowfall.</p></div></li>
+          </ul>
+        </div>
+        <div class="chapter__art art-pair" data-track-anchor>
+          <figure class="phone phone--back" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/resort-forecast.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington's 7-day forecast: hourly snow bars with temperature and wind, about 7 inches of snow due Monday.">
+              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+          <figure class="phone phone--front" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/resort-top.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington's resort page: 11 inches in the past 48 hours, 8 more forecast, the morning report, a 142-inch season total and a 38-inch base.">
+              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--flip" id="ski" aria-labelledby="ski-title">
+      <div class="chapter__inner">
+        <div class="chapter__copy" data-reveal>
+          <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-blue"/></svg>Ski it</p>
+          <h2 id="ski-title">A trail map that knows what&rsquo;s running.</h2>
+          <p class="lead">Detailed trail maps in 2D or 3D, drawn from open map data. Where the resort reports it, every lift gets a light: running, on hold or closed.</p>
+          <ul class="features features--compact">
+            <li><span class="lamps" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Lift lights</h3><p>Green, amber or red at a glance.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><div><h3>Find anything</h3><p>Trails, lifts, lodges, restrooms and food.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-toggle"/></svg><div><h3>Map key switches</h3><p>Show learning areas, night skiing and race courses.</p></div></li>
+          </ul>
+          <div class="maps-list" aria-label="Resorts with GoSki trail maps">
+            <p class="maps-list__label">Trail maps today</p>
+            <ul>
+              <li><b>Killington</b><span>Vermont</span></li>
+              <li><b>Stowe</b><span>Vermont</span></li>
+              <li><b>Heavenly</b><span>California / Nevada</span></li>
+              <li><b>Northstar</b><span>California</span></li>
+              <li><b>Kirkwood</b><span>California</span></li>
+              <li><b>Stevens Pass</b><span>Washington</span></li>
+            </ul>
+            <p class="maps-list__more">More maps are on the way.</p>
+          </div>
+        </div>
+        <div class="chapter__art art-single" data-track-anchor>
+          <figure class="phone phone--hero" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/map-stowe.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Stowe's trail map in 3D below Mount Mansfield, with lifts, trails, lodges and buttons for parking, restrooms and food.">
+              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="record" aria-labelledby="record-title">
+      <div class="chapter__inner">
+        <div class="chapter__copy" data-reveal>
+          <p class="marker marker--plain">Ski day recording</p>
+          <h2 id="record-title">Make every run count.</h2>
+          <p class="lead">Tap Start Ski Day and put your phone away. GoSki turns your GPS route into estimated runs, vertical, distance and time, and at resorts with GoSki trail maps it names the trails each run followed.</p>
+          <ul class="ticks">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Keeps recording with the screen locked</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Encrypted on your iPhone, never uploaded</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Included with GoSki Pass</li>
+          </ul>
+        </div>
+        <div class="chapter__art art-pair" data-track-anchor>
+          <figure class="phone phone--back" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/session-runs.webp" width="720" height="1561" loading="lazy" decoding="async" alt="The day's latest runs, each listed with the Killington trails it followed, such as Nivis Walk, Launch Pad and Bear Trax.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+          <figure class="phone phone--front" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/session.webp" width="720" height="1561" loading="lazy" decoding="async" alt="A ski day in progress at Killington with Pause and Finish day buttons and live totals.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--flip chapter--relive" id="relive" aria-labelledby="relive-title">
+      <div class="chapter__inner">
+        <div class="chapter__copy" data-reveal>
+          <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-black"/></svg>Relive it</p>
+          <h2 id="relive-title">Every run, every day, the whole season.</h2>
+          <p class="lead">Replay any day on 3D terrain with your route colored by speed, then check the elevation and speed charts. Your season stacks up as you go: ski days, vertical and runs, saved on your phone.</p>
+        </div>
+        <div class="chapter__art art-replay" data-track-anchor>
+          <figure class="replay-card" data-reveal>
+            <img src="assets/screens/replay-map.webp" width="1047" height="1617" loading="lazy" decoding="async" alt="A ski day's route replayed over 3D terrain at Killington: lift rides in purple, runs shaded from blue to gold by speed.">
+            <figcaption><span class="swatch swatch--lift"></span>Lift <span class="swatch swatch--speed"></span>Slow to fast</figcaption>
+          </figure>
+          <figure class="phone phone--overlap" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/you.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Your profile: an 11-day season with 192,254 feet of vertical and 147 runs, and an activity log of saved days.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="more" aria-labelledby="more-title">
+      <div class="more__inner">
+        <h2 id="more-title" data-reveal>More mountain. Less guesswork.</h2>
+        <ul class="cards">
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><h3>Beyond the boundary</h3><p>Search U.S. places, plan a backcountry route and download map areas for when there&rsquo;s no signal.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-mug"/></svg><h3>After last chair</h3><p>Apr&egrave;s-ski spots on the mountain and nearby, plus events, at supported resorts.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg><h3>30-day trends</h3><p>Snowfall, base depth and open lifts and trails over the past month.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pass" id="pass" aria-labelledby="pass-title">
+      <div class="pass__inner">
+        <div class="pass__copy" data-reveal>
+          <p class="eyebrow">GoSki Pass</p>
+          <h2 id="pass-title">A better line on your next ski day.</h2>
+          <p class="lead">GoSki is free to download and use. A GoSki Pass adds the extras on the ticket, weekly or monthly. Two ways up, same perks. Prices are shown in the app.</p>
+        </div>
+        <div class="ticket" data-reveal>
+          <div class="ticket__main">
+            <span class="ticket__stamp">GoSki Pass</span>
+            <ul class="ticket__perks">
+              <li><b>See the next storm.</b><span>7-day hourly forecasts</span></li>
+              <li><b>Read the snow.</b><span>30-day snow &amp; terrain trends</span></li>
+              <li><b>Know the mountain.</b><span>Premium resort visuals</span></li>
+              <li><b>Make every run count.</b><span>Ski day recording on iPhone</span></li>
+            </ul>
+          </div>
+          <div class="ticket__stub" aria-hidden="true">
+            <span class="ticket__ways">Weekly<em>or</em>Monthly</span>
+            <span class="ticket__code"></span>
+            <span class="ticket__small">Two ways up. Same perks.</span>
+          </div>
+        </div>
+        <p class="fine pass__fine">Subscriptions renew automatically until canceled in your App Store account settings.</p>
+      </div>
+    </section>
+
+    <section class="privacy" aria-labelledby="privacy-title">
+      <div class="privacy__inner">
+        <h2 id="privacy-title" data-reveal>Your ski days stay yours.</h2>
+        <ul class="privacy__list">
+          <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><h3>No password</h3><p>Sign in with a 6-digit code sent to your email.</p></li>
+          <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><h3>Encrypted on your phone</h3><p>Ski recordings stay on your device and are never uploaded.</p></li>
+          <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg><h3>No ad tracking</h3><p>GoSki doesn&rsquo;t sell your data or track you across apps for ads.</p></li>
+        </ul>
+        <a class="link-quiet" href="https://privacy.goskiapp.com/">Read the privacy policy <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <section class="finale" aria-labelledby="finale-title">
+      <div class="finale__inner" data-track-end>
+        <img class="finale__icon" src="assets/icon/icon-256.webp" width="112" height="112" alt="" loading="lazy">
+        <h2 id="finale-title">See you at first chair.</h2>
+        <p class="lead">GoSki is free on the App Store for iPhone and iPad.</p>
+        <a class="store-badge store-badge--lg" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">
+          <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?size=250x83" width="180" height="60" alt="Download on the App Store" loading="lazy">
+        </a>
+      </div>
+      <div class="finale__land" aria-hidden="true">
+        <svg viewBox="-480 0 2400 220">
+          <defs>
+            <linearGradient id="fin" x1="0" y1="28" x2="0" y2="200" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b8c7da"/><stop offset=".22" stop-color="#4a6890"/><stop offset=".6" stop-color="#12284a"/><stop offset="1" stop-color="#07152f"/></linearGradient>
+          </defs>
+          <path fill="url(#fin)" d="M-480 220L-480 104.0L-471 101.0L-463 97.8L-454 95.0L-446 95.3L-437 91.4L-429 89.3L-420 86.0L-411 87.6L-403 88.4L-394 91.2L-386 92.0L-377 94.2L-369 95.2L-360 96.0L-351 93.7L-343 88.3L-334 83.4L-326 79.7L-317 78.3L-309 72.3L-300 70.0L-292 68.3L-283 65.8L-275 61.3L-267 61.7L-258 56.6L-250 56.0L-242 60.1L-233 62.6L-225 62.9L-217 67.5L-208 70.2L-200 72.0L-191 73.4L-183 78.4L-174 79.1L-166 85.1L-157 87.0L-149 91.1L-140 92.0L-131 92.5L-122 95.8L-114 99.2L-105 101.4L-96 102.0L-88 107.0L-79 109.1L-70 110.0L-61 110.5L-52 111.1L-44 114.4L-35 114.6L-26 116.9L-18 117.5L-9 118.3L0 120.0L8 117.8L16 115.3L24 114.4L32 114.6L40 113.3L48 109.9L56 109.8L64 108.2L72 106.3L80 104.0L89 101.9L98 99.5L106 95.2L115 93.8L124 89.4L132 87.4L141 85.8L150 82.0L158 84.0L167 83.9L175 87.7L183 87.9L192 89.0L200 90.0L209 83.3L217 81.1L226 75.2L234 72.4L243 67.0L251 63.9L260 58.0L268 59.7L276 61.5L284 61.1L292 63.3L300 64.0L308 60.2L316 55.7L324 49.0L332 46.2L340 40.0L348 38.9L356 35.7L364 34.3L372 30.0L381 37.5L391 40.8L400 46.0L408 50.9L416 54.2L424 61.8L432 67.0L440 70.0L449 73.6L457 78.2L466 82.0L474 85.8L483 87.2L491 93.4L500 96.0L509 98.3L517 100.6L526 101.7L534 104.5L543 107.1L551 108.5L560 110.0L568 110.2L576 107.1L584 107.0L592 107.4L600 107.5L608 105.4L616 106.5L624 105.7L632 103.0L640 104.0L648 102.7L656 100.6L664 98.8L672 97.9L680 97.3L688 95.7L696 94.5L704 92.7L712 93.1L720 92.0L729 89.2L737 87.9L746 85.5L754 81.8L763 82.1L771 76.3L780 76.0L789 76.8L797 77.4L806 79.1L814 79.1L823 83.0L831 82.4L840 84.0L849 78.7L857 77.6L866 72.1L874 70.5L883 66.2L891 63.8L900 60.0L908 59.3L916 56.4L924 52.5L932 51.6L940 48.0L948 46.0L956 42.5L964 39.2L972 38.0L981 43.1L991 47.6L1000 52.0L1008 58.2L1017 62.6L1025 65.4L1033 68.7L1042 75.3L1050 78.0L1059 78.6L1067 81.6L1076 86.0L1084 88.7L1093 89.4L1101 93.9L1110 96.0L1119 96.5L1128 93.5L1136 92.7L1145 90.9L1154 90.2L1162 91.8L1171 88.5L1180 88.0L1189 87.2L1197 84.5L1206 80.7L1214 76.8L1223 77.0L1231 72.6L1240 70.0L1249 71.4L1257 72.7L1266 77.0L1274 76.8L1283 77.7L1291 80.2L1300 82.0L1309 82.5L1318 86.5L1326 87.8L1335 89.2L1344 93.1L1352 95.3L1361 94.1L1370 98.0L1379 97.1L1388 95.1L1396 96.7L1405 95.1L1414 92.0L1422 91.1L1431 89.7L1440 90.0L1449 88.5L1457 84.2L1466 83.1L1474 80.9L1483 80.9L1491 78.7L1500 76.0L1509 75.0L1517 69.2L1526 68.0L1534 63.9L1543 62.0L1551 60.6L1560 58.0L1568 57.9L1576 60.1L1584 63.3L1592 64.6L1600 66.0L1609 68.0L1617 72.6L1626 76.7L1634 76.6L1643 82.9L1651 85.7L1660 88.0L1669 85.4L1677 82.7L1686 83.8L1694 79.4L1703 76.4L1711 74.4L1720 74.0L1729 73.3L1737 70.4L1746 69.2L1754 66.9L1763 64.1L1771 63.8L1780 60.0L1789 62.7L1797 66.5L1806 70.8L1814 73.0L1823 77.2L1831 79.2L1840 82.0L1848 84.1L1856 83.2L1864 85.2L1872 86.8L1880 87.5L1888 89.4L1896 90.4L1904 92.4L1912 95.1L1920 96.0L1920 220Z"/>
+          <path fill="#07152f" d="M-480 186c160-8 320-6 480-2 200-22 420-20 640-6 230 15 470 14 800-16 160-6 320 0 480 8V220H-480Z"/>
+          <path fill="none" stroke="#e2e8f0" stroke-opacity=".18" stroke-width="1.5" d="M-480 186c160-8 320-6 480-2 200-22 420-20 640-6 230 15 470 14 800-16 160-6 320 0 480 8"/>
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/icon/icon-64.png" width="40" height="40" alt="" loading="lazy">
+        <div><b>GoSki</b><span>Snow, maps &amp; ski day tracking</span></div>
+      </div>
+      <nav class="footer__links" aria-label="Help and legal">
+        <a href="https://privacy.goskiapp.com/support/">Support</a>
+        <a href="https://privacy.goskiapp.com/">Privacy Policy</a>
+        <a href="mailto:goskiapp@gmail.com">goskiapp@gmail.com</a>
+      </nav>
+      <div class="footer__fine">
+        <p>App screens show sample winter conditions. GoSki is independent and isn&rsquo;t affiliated with or endorsed by any resort; resort names belong to their owners.</p>
+        <p>Map data in the app screens: &copy; OpenStreetMap contributors, OpenMapTiles, OpenSkiMap, Skimap.org, Mapterhorn, Mapzen terrain, USGS. Snowfall analysis: NOAA.</p>
+        <p>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+        <p>&copy; 2026 GoSki</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
