@@ -1,0 +1,102 @@
+# GoSki
+
+> GoSki (App Store name "GoSki: Ski Tracker & Maps") is a free iPhone and iPad app for skiers and snowboarders. It has snow reports and hourly forecasts for 43 ski resorts in the U.S. and Canada, 2D and 3D trail maps of all 43, Live Lift Status backed by Real Time data, lift and storm alerts, and a GPS ski tracker that names every run by the trails it followed.
+
+Key facts (updated 2026-10-24):
+
+- Platform: iPhone and iPad, iOS 15 or later. The Ski Tracker records on iPhone. Not on Android.
+- Price: free to download and use. GoSki PRO is an optional weekly or monthly subscription (prices shown in the app). The 4K Map Pack is a separate one-time purchase.
+- Resorts: 43 (31 U.S., 12 Canada). Every one has a GoSki trail map in 2D and 3D.
+- Free: snow reports, the next 24 hours of forecast, snowfall maps and the Snow leaderboard (U.S.), 2D Basic trail maps of every resort plus 3 free 3D maps (24 hours each), Live Lift Status, the Snow Alert, each storm's first alert, ski news, Food & Apres Ski, ski pass calendars, lift ticket links and backcountry maps.
+- GoSki PRO: Ski Tracker, 3D trail maps everywhere, full 6-day forecast, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
+- Ski Tracker: one-tap start, the resort is recognized automatically, steady barometer-backed vertical, lift rides never counted as vertical, runs named by trail and drawn on GoSki's trail map, speed heat map, elevation and speed graphs, works without cell signal, recordings encrypted on the iPhone and never uploaded.
+- Weather: high-quality forecasts from trusted sources: NOAA's National Weather Service (U.S.) and NOAA's National Blend of Models with Environment Canada alerts (Canada). Snowfall maps and the Snow leaderboard use NOAA's snowfall analysis.
+- Ski passes: add an Epic, Ikon, Indy or Mountain Collective pass to see covered resorts and blackout dates.
+- Sign-in: 6-digit email code or Sign in with Apple. No password.
+- Independent: not affiliated with or endorsed by any resort. Operated by RAK Industries LLC.
+- App Store: https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548
+
+## Pages
+
+- [Features](https://goskiapp.com/features/): every GoSki feature in one list
+- [Ski Tracker](https://goskiapp.com/ski-tracker/): how the GPS ski tracker records, measures and names runs
+- [Trail Maps](https://goskiapp.com/trail-maps/): 2D and 3D trail maps of all 43 resorts, with trail and lift counts
+- [Alerts](https://goskiapp.com/alerts/): Day Alerts, Storm Alerts, Snow Alert and Resort Updates
+- [GoSki PRO](https://goskiapp.com/pro/): what's free and what's included with GoSki PRO
+- [Resorts](https://goskiapp.com/resorts/): all 43 resorts in GoSki
+- [FAQ](https://goskiapp.com/faq/): short answers about pricing, tracking, offline use and privacy
+- [What's New](https://goskiapp.com/whats-new/): the latest updates
+- [Why ski tracker numbers differ](https://goskiapp.com/guides/ski-tracker-accuracy/): what vertical means, why GPS height drifts and what to look for in a tracker
+- [What to look for in a ski app](https://goskiapp.com/guides/choosing-a-ski-app/): a checklist for choosing a ski tracker and resort app
+
+## Resorts
+
+### Northeast
+
+- [Stowe Mountain](https://goskiapp.com/resorts/stowe/): Stowe, Vermont; GoSki trail map with 125 named trails and 12 lifts; passes: Epic
+- [Killington](https://goskiapp.com/resorts/killington/): Killington, Vermont; GoSki trail map with 144 named trails and 20 lifts; passes: Ikon
+- [Sunday River](https://goskiapp.com/resorts/sunday-river/): Newry, Maine; GoSki trail map with 139 named trails and 19 lifts; passes: Ikon, Mountain Collective; night skiing
+- [Sugarloaf](https://goskiapp.com/resorts/sugarloaf/): Carrabassett Valley, Maine; GoSki trail map with 148 named trails and 14 lifts; passes: Ikon, Mountain Collective
+- [Jay Peak](https://goskiapp.com/resorts/jay-peak/): Jay, Vermont; GoSki trail map with 84 named trails and 8 lifts; passes: Indy
+- [Okemo](https://goskiapp.com/resorts/okemo/): Ludlow, Vermont; GoSki trail map with 127 named trails and 21 lifts; passes: Epic
+- [Stratton](https://goskiapp.com/resorts/stratton/): Stratton Mountain, Vermont; GoSki trail map with 114 named trails and 15 lifts; passes: Ikon
+- [Mount Snow](https://goskiapp.com/resorts/mount-snow/): West Dover, Vermont; GoSki trail map with 84 named trails and 19 lifts; passes: Epic
+- [Hunter Mountain](https://goskiapp.com/resorts/hunter-mountain/): Hunter, New York; GoSki trail map with 70 named trails and 12 lifts; passes: Epic
+- [Attitash](https://goskiapp.com/resorts/attitash/): Bartlett, New Hampshire; GoSki trail map with 71 named trails and 8 lifts; passes: Epic
+- [Wildcat](https://goskiapp.com/resorts/wildcat/): Gorham, New Hampshire; GoSki trail map with 48 named trails and 5 lifts; passes: Epic
+- [Mount Sunapee](https://goskiapp.com/resorts/mount-sunapee/): Newbury, New Hampshire; GoSki trail map with 66 named trails and 8 lifts; passes: Epic
+- [Sugarbush](https://goskiapp.com/resorts/sugarbush/): Warren, Vermont; GoSki trail map with 131 named trails and 17 lifts; passes: Ikon
+- [Magic Mountain](https://goskiapp.com/resorts/magic-mountain/): Londonderry, Vermont; GoSki trail map with 52 named trails and 5 lifts; passes: Indy; night skiing
+- [Crotched Mountain](https://goskiapp.com/resorts/crotched-mountain/): Bennington, New Hampshire; GoSki trail map with 25 named trails and 5 lifts; passes: Epic; night skiing
+
+### Mid-Atlantic & Southeast
+
+- [Liberty Mountain](https://goskiapp.com/resorts/liberty-mountain/): Carroll Valley, Pennsylvania; GoSki trail map with 20 named trails and 8 lifts; passes: Epic; night skiing
+
+### Rockies
+
+- [Vail Ski Resort](https://goskiapp.com/resorts/vail/): Vail, Colorado; GoSki trail map with 187 named trails and 31 lifts; passes: Epic
+- [Aspen Snowmass](https://goskiapp.com/resorts/aspen-snowmass/): Aspen, Colorado; GoSki trail map with 371 named trails and 33 lifts; passes: Ikon, Mountain Collective
+- [Breckenridge](https://goskiapp.com/resorts/breckenridge/): Breckenridge, Colorado; GoSki trail map with 173 named trails and 25 lifts; passes: Epic
+- [Park City](https://goskiapp.com/resorts/park-city/): Park City, Utah; GoSki trail map with 337 named trails and 38 lifts; passes: Epic
+- [Jackson Hole](https://goskiapp.com/resorts/jackson-hole/): Teton Village, Wyoming; GoSki trail map with 130 named trails and 13 lifts; passes: Ikon, Mountain Collective
+- [Beaver Creek](https://goskiapp.com/resorts/beaver-creek/): Avon, Colorado; GoSki trail map with 157 named trails and 18 lifts; passes: Epic
+- [Keystone](https://goskiapp.com/resorts/keystone/): Keystone, Colorado; GoSki trail map with 134 named trails and 14 lifts; passes: Epic; night skiing
+- [Crested Butte](https://goskiapp.com/resorts/crested-butte/): Crested Butte, Colorado; GoSki trail map with 121 named trails and 15 lifts; passes: Epic
+- [Steamboat](https://goskiapp.com/resorts/steamboat/): Steamboat Springs, Colorado; GoSki trail map with 172 named trails and 17 lifts; passes: Ikon; night skiing
+
+### California & Nevada
+
+- [Mammoth Mountain](https://goskiapp.com/resorts/mammoth-mountain/): Mammoth Lakes, California; GoSki trail map with 169 named trails and 25 lifts; passes: Ikon
+- [Palisades Tahoe](https://goskiapp.com/resorts/palisades-tahoe/): Olympic Valley, California; GoSki trail map with 195 named trails and 43 lifts; passes: Ikon
+- [Heavenly](https://goskiapp.com/resorts/heavenly/): South Lake Tahoe, California; GoSki trail map with 116 named trails and 24 lifts; passes: Epic
+- [Northstar](https://goskiapp.com/resorts/northstar/): Truckee, California; GoSki trail map with 92 named trails and 14 lifts; passes: Epic
+- [Kirkwood](https://goskiapp.com/resorts/kirkwood/): Kirkwood, California; GoSki trail map with 83 named trails and 12 lifts; passes: Epic
+
+### Pacific Northwest
+
+- [Stevens Pass](https://goskiapp.com/resorts/stevens-pass/): Skykomish, Washington; GoSki trail map with 53 named trails and 10 lifts; passes: Epic; night skiing
+
+### British Columbia
+
+- [Whistler Blackcomb](https://goskiapp.com/resorts/whistler-blackcomb/): Whistler, British Columbia; GoSki trail map with 213 named trails and 23 lifts; passes: Epic
+- [Revelstoke Mountain Resort](https://goskiapp.com/resorts/revelstoke/): Revelstoke, British Columbia; GoSki trail map with 59 named trails and 6 lifts; passes: Ikon, Mountain Collective
+- [Kicking Horse Mountain Resort](https://goskiapp.com/resorts/kicking-horse/): Golden, British Columbia; GoSki trail map with 65 named trails and 5 lifts; passes: Epic
+- [Fernie Alpine Resort](https://goskiapp.com/resorts/fernie/): Fernie, British Columbia; GoSki trail map with 136 named trails and 10 lifts; passes: Epic; night skiing
+- [Sun Peaks Resort](https://goskiapp.com/resorts/sun-peaks/): Sun Peaks, British Columbia; GoSki trail map with 150 named trails and 12 lifts; passes: Ikon, Mountain Collective
+- [Big White Ski Resort](https://goskiapp.com/resorts/big-white/): Kelowna, British Columbia; GoSki trail map with 106 named trails and 16 lifts; passes: Indy; night skiing
+- [SilverStar Mountain Resort](https://goskiapp.com/resorts/silverstar/): Vernon, British Columbia; GoSki trail map with 133 named trails and 7 lifts; passes: Ikon; night skiing
+- [RED Mountain Resort](https://goskiapp.com/resorts/red-mountain/): Rossland, British Columbia; GoSki trail map with 87 named trails and 8 lifts; passes: Ikon; night skiing
+- [Panorama Mountain Resort](https://goskiapp.com/resorts/panorama/): Invermere, British Columbia; GoSki trail map with 117 named trails and 10 lifts; passes: Ikon, Mountain Collective; night skiing
+
+### Alberta & Prairies
+
+- [Lake Louise Ski Resort](https://goskiapp.com/resorts/lake-louise/): Lake Louise, Alberta; GoSki trail map with 147 named trails and 13 lifts; passes: Ikon, Mountain Collective
+- [Banff Sunshine Village](https://goskiapp.com/resorts/banff-sunshine/): Banff, Alberta; GoSki trail map with 126 named trails and 12 lifts; passes: Ikon, Mountain Collective
+- [Mt. Norquay](https://goskiapp.com/resorts/mt-norquay/): Banff, Alberta; GoSki trail map with 71 named trails and 7 lifts; passes: Ikon; night skiing
+
+## Optional
+
+- [Privacy Policy](https://privacy.goskiapp.com/)
+- [Support](https://privacy.goskiapp.com/support/)
+- [Terms of Use](https://goskiapp.com/terms/)
