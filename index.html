@@ -3,39 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>GoSki: Snow reports, trail maps and ski day tracking</title>
-  <meta name="description" content="Snow reports and forecasts for 40+ ski resorts across the U.S. and Canada, trail maps in 2D and 3D, and a record of every run you ski. GoSki is free on the App Store.">
+  <title>GoSki: Ski Tracker, 3D Trail Maps &amp; Snow Forecasts for 43 Resorts</title>
+  <meta name="description" content="A GPS ski tracker that names every run, 3D trail maps of 43 resorts in the U.S. and Canada, snow forecasts, Live Lift Status and alerts. Free on iPhone.">
   <meta name="theme-color" content="#020617">
   <meta name="color-scheme" content="dark">
   <meta name="apple-itunes-app" content="app-id=6759206548">
   <link rel="canonical" href="https://goskiapp.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32.png">
   <link rel="apple-touch-icon" href="assets/icon/icon-180.png">
+  <link rel="alternate" type="text/plain" href="https://goskiapp.com/llms.txt" title="GoSki facts for AI assistants">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://goskiapp.com/">
   <meta property="og:site_name" content="GoSki">
   <meta property="og:title" content="GoSki: Plan it. Ski it. Relive it.">
-  <meta property="og:description" content="Snow reports and forecasts for 40+ resorts, trail maps in 2D and 3D, and a record of every run you ski.">
-  <meta property="og:image" content="https://goskiapp.com/assets/og-image.png">
+  <meta property="og:description" content="A ski tracker that names every run, 3D trail maps of 43 resorts, snow forecasts and Real Time lift alerts.">
+  <meta property="og:image" content="https://goskiapp.com/assets/og-image-v2.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="GoSki on three iPhones: a snowfall map, a 3D trail map of Killington and a live ski day.">
+  <meta property="og:image:alt" content="GoSki on three iPhones: Explore with the Snow leaderboard, Killington’s 3D trail map and a live ski day.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261024">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "GoSki: Resorts",
-    "operatingSystem": "iOS 15.0 or later",
-    "applicationCategory": "SportsApplication",
-    "description": "Snow reports, forecasts and trail maps for ski resorts across the U.S. and Canada, with ski day recording.",
-    "url": "https://goskiapp.com/",
-    "downloadUrl": "https://apps.apple.com/us/app/goski-resorts/id6759206548",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "@id": "https://goskiapp.com/#app",
+        "name": "GoSki: Ski Tracker & Maps",
+        "alternateName": "GoSki",
+        "operatingSystem": "iOS 15.0 or later",
+        "applicationCategory": "SportsApplication",
+        "description": "A GPS ski tracker that names every run by trail, 2D and 3D trail maps of 43 ski resorts in the U.S. and Canada, snow reports, forecasts from NOAA and the National Weather Service, Live Lift Status backed by Real Time data, and lift and storm alerts.",
+        "url": "https://goskiapp.com/",
+        "downloadUrl": "https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548",
+        "installUrl": "https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548",
+        "screenshot": ["https://goskiapp.com/assets/screens/explore-v2.webp", "https://goskiapp.com/assets/screens/map-killington-3d-v2.webp", "https://goskiapp.com/assets/screens/session-live-v2.webp", "https://goskiapp.com/assets/screens/session-runs-v2.webp", "https://goskiapp.com/assets/screens/snow-leaderboard-v2.webp"],
+        "featureList": [
+          "GPS ski tracker: runs, vertical, speed, distance and time on snow",
+          "Runs named by trail at 43 resorts",
+          "Steady barometer-backed vertical; lift rides never counted",
+          "2D and 3D trail maps of 43 ski resorts",
+          "Live Lift Status backed by Real Time data, and Day Alerts for lift holds, delays and closures",
+          "Snow reports and hourly forecasts from NOAA and the National Weather Service",
+          "Storm Alerts and a free Snow Alert",
+          "Snow leaderboard of U.S. resorts",
+          "Epic, Ikon, Indy and Mountain Collective blackout date calendars",
+          "4K aerial Terrain Overlay (4K Map Pack)"
+        ],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@id": "https://goskiapp.com/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://goskiapp.com/#org",
+        "name": "GoSki",
+        "url": "https://goskiapp.com/",
+        "logo": "https://goskiapp.com/assets/icon/icon-512.png",
+        "email": "goskiapp@gmail.com",
+        "sameAs": ["https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://goskiapp.com/#site",
+        "name": "GoSki",
+        "url": "https://goskiapp.com/",
+        "publisher": { "@id": "https://goskiapp.com/#org" }
+      }
+    ]
   }
   </script>
 </head>
@@ -61,6 +99,14 @@
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-storm" viewBox="0 0 24 24"><path d="M6 16.33A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.97"/><path d="m13 12-3 5h4l-3 5"/></symbol>
+    <symbol id="i-news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></symbol>
+    <symbol id="i-trees" viewBox="0 0 24 24"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0ZM7 16v6M13 19v3M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
     <!-- Trail ratings, as on the app's map key. -->
     <symbol id="r-green" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="#22c55e"/></symbol>
     <symbol id="r-blue" viewBox="0 0 20 20"><rect x="2" y="2" width="16" height="16" rx="1.5" fill="#3b82f6"/></symbol>
@@ -73,15 +119,16 @@
         <img src="assets/icon/icon-64.png" width="32" height="32" alt="">
         <span>GoSki</span>
       </a>
-      <nav aria-label="Sections">
+      <nav aria-label="GoSki pages">
         <ul class="nav__links">
-          <li><a href="#plan">Plan</a></li>
-          <li><a href="#ski">Ski</a></li>
-          <li><a href="#relive">Relive</a></li>
-          <li><a href="#pass">GoSki Pass</a></li>
+          <li><a href="/ski-tracker/">Ski Tracker</a></li>
+          <li><a href="/trail-maps/">Trail Maps</a></li>
+          <li><a href="/alerts/">Alerts</a></li>
+          <li><a href="/resorts/">Resorts</a></li>
+          <li><a href="/pro/">GoSki PRO</a></li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">Get the app</a>
+      <a class="btn btn--primary btn--sm" href="https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548">Get the app</a>
     </div>
   </header>
 
@@ -113,9 +160,9 @@
             <span class="line"><svg class="rate" aria-hidden="true"><use href="#r-blue"/></svg>Ski it.</span>
             <span class="line"><svg class="rate" aria-hidden="true"><use href="#r-black"/></svg>Relive it.</span>
           </h1>
-          <p class="hero__lead">Snow reports and forecasts for 40+ resorts across the U.S. and Canada, trail maps in 2D and 3D, and with GoSki Pass, a record of every run you ski.</p>
+          <p class="hero__lead">Snow forecasts for 43 resorts across the U.S. and Canada, a 2D and 3D trail map of every one, Live Lift Status and alerts, and with GoSki PRO, a ski tracker that names every run you ski.</p>
           <div class="hero__cta">
-            <a class="store-badge" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">
+            <a class="store-badge" href="https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548">
               <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?size=250x83" width="156" height="52" alt="Download on the App Store">
             </a>
             <a class="link-quiet" href="#plan">See how it works <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
@@ -125,19 +172,19 @@
         <div class="hero__phones" aria-label="GoSki screens">
           <figure class="phone phone--side phone--left" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/explore.webp" width="720" height="1561" alt="Explore: a snowfall map of the Northeast above favorite resorts Killington, Stowe and Sugarbush with recent and forecast snow." fetchpriority="high">
+              <img src="assets/screens/explore-v2.webp" width="720" height="1561" alt="Explore: a map of the Northeast’s resorts beside the Snow leaderboard’s top three, above favorites Killington, Stowe Mountain and Sugarbush with the past and next 48 hours of snow." fetchpriority="high">
               <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
           <figure class="phone phone--center" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/map-2d.webp" width="720" height="1561" alt="Killington's trail map in 3D with trails, lifts, lodges and a search box." fetchpriority="high">
+              <img src="assets/screens/map-killington-3d-v2.webp" width="720" height="1561" alt="Killington’s 3D trail map below Skye Peak and Bear Mountain, with named trails, lifts with Live Lift Status, lodges and a search box." fetchpriority="high">
               <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
           <figure class="phone phone--side phone--right" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/session.webp" width="720" height="1561" alt="A live ski day at Killington: 20,736 feet of downhill vertical, 16 runs and 24.6 miles." fetchpriority="high">
+              <img src="assets/screens/session-live-v2.webp" width="720" height="1561" alt="A live ski day at Killington: 19,657 feet of vertical skied with lift rides not counted, 3,483 feet current altitude, 22.9 miles skied and 15 runs." fetchpriority="high">
               <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
@@ -167,10 +214,10 @@
     </section>
 
     <section class="resorts" aria-label="Resorts in GoSki">
-      <p class="eyebrow eyebrow--center">40+ resorts across the U.S. and Canada</p>
+      <p class="eyebrow eyebrow--center"><a class="eyebrow-link" href="/resorts/">43 resorts across the U.S. and Canada</a></p>
       <div class="marquee" data-marquee>
         <ul class="marquee__row">
-          <li>Killington</li><li>Whistler Blackcomb</li><li>Palisades Tahoe</li><li>Stowe</li><li>Jackson Hole</li><li>Lake Louise</li><li>Vail</li><li>Sugarloaf</li><li>Revelstoke</li><li>Mammoth Mountain</li><li>Sunday River</li><li>Banff Sunshine</li><li>Park City</li><li>Sugarbush</li><li>Heavenly</li><li>Kicking Horse</li><li>Breckenridge</li><li>Jay Peak</li><li>Northstar</li><li>Fernie</li><li>Aspen Snowmass</li><li>Okemo</li><li>Kirkwood</li><li>Sun Peaks</li><li>Steamboat</li><li>Stratton</li><li>Stevens Pass</li><li>Big White</li><li>Beaver Creek</li><li>Mount Snow</li><li>Crested Butte</li><li>SilverStar</li><li>Keystone</li><li>Hunter Mountain</li><li>RED Mountain</li><li>Attitash</li><li>Panorama</li><li>Wildcat</li><li>Mt. Norquay</li><li>Mount Sunapee</li><li>Magic Mountain</li>
+          <li>Killington</li><li>Whistler Blackcomb</li><li>Palisades Tahoe</li><li>Stowe</li><li>Jackson Hole</li><li>Lake Louise</li><li>Vail</li><li>Sugarloaf</li><li>Revelstoke</li><li>Mammoth Mountain</li><li>Sunday River</li><li>Banff Sunshine</li><li>Park City</li><li>Sugarbush</li><li>Heavenly</li><li>Kicking Horse</li><li>Breckenridge</li><li>Jay Peak</li><li>Northstar</li><li>Fernie</li><li>Aspen Snowmass</li><li>Okemo</li><li>Kirkwood</li><li>Sun Peaks</li><li>Steamboat</li><li>Stratton</li><li>Stevens Pass</li><li>Big White</li><li>Beaver Creek</li><li>Mount Snow</li><li>Crested Butte</li><li>SilverStar</li><li>Keystone</li><li>Hunter Mountain</li><li>RED Mountain</li><li>Attitash</li><li>Panorama</li><li>Wildcat</li><li>Mt. Norquay</li><li>Mount Sunapee</li><li>Magic Mountain</li><li>Crotched Mountain</li><li>Liberty Mountain</li>
         </ul>
       </div>
     </section>
@@ -180,24 +227,25 @@
         <div class="chapter__copy" data-reveal>
           <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-green"/></svg>Plan it</p>
           <h2 id="plan-title">Know where it snowed, and where it&rsquo;s about to.</h2>
-          <p class="lead">Snow in the last 48 hours, snow in the next 48, lifts and trails open: GoSki lines up the numbers that matter for every resort, with your favorites on top. Switch the map to NOAA&rsquo;s snowfall analysis to see where the storm actually landed.</p>
+          <p class="lead">New snow, the forecast, lifts and trails open and the latest resort update: GoSki lines up the numbers that matter for every resort, with your favorites on top. Switch the map to NOAA&rsquo;s snowfall analysis to see where the storm actually landed.</p>
           <ul class="features">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"/></svg><div><h3>Morning reports</h3><p>Each resort&rsquo;s own report: new snow, base depth, season total and surface.</p></div></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-cloud-snow"/></svg><div><h3>Hour by hour</h3><p>Snow, temperature and wind from National Weather Service forecasts, out to seven days with GoSki Pass.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"/></svg><div><h3>Morning reports</h3><p>New snow, base depth, this winter&rsquo;s season total and surface conditions.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-cloud-snow"/></svg><div><h3>Hour by hour</h3><p>Trusted forecasts from NOAA and the National Weather Service in 6-hour blocks: the next 24 hours free, the full 6 days with GoSki PRO.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><div><h3>Snow leaderboard</h3><p>Every U.S. resort ranked by NOAA&rsquo;s new snow at mid-mountain: this season, 72, 48 and 24 hours.</p></div></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-history"/></svg><div><h3>Past seasons</h3><p>See how this winter stacks up against previous seasons&rsquo; snowfall.</p></div></li>
           </ul>
         </div>
         <div class="chapter__art art-pair" data-track-anchor>
           <figure class="phone phone--back" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/resort-forecast.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington's 7-day forecast: hourly snow bars with temperature and wind, about 7 inches of snow due Monday.">
-              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+              <img src="assets/screens/explore-snowfall-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="The snowfall map: the past 24 hours of snow across New England from NOAA’s analysis, with GoSki’s resorts as dots.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
           <figure class="phone phone--front" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/resort-top.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington's resort page: 11 inches in the past 48 hours, 8 more forecast, the morning report, a 142-inch season total and a 38-inch base.">
-              <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
+              <img src="assets/screens/resort-top-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington’s resort page: 12 inches in the past 72 hours and 8.8 more forecast, the latest resort update with a Day Alerts switch, a 142-inch season total and a 38-inch base.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
         </div>
@@ -209,29 +257,29 @@
         <div class="chapter__copy" data-reveal>
           <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-blue"/></svg>Ski it</p>
           <h2 id="ski-title">A trail map that knows what&rsquo;s running.</h2>
-          <p class="lead">Detailed trail maps in 2D or 3D, drawn from open map data. Where the resort reports it, every lift gets a light: running, on hold or closed.</p>
+          <p class="lead">Every resort in GoSki has a detailed trail map in 2D and 3D, drawn from open map data. Live Lift Status, backed by Real Time data, shows lifts running, on hold or closed.</p>
           <ul class="features features--compact">
-            <li><span class="lamps" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Lift lights</h3><p>Green, amber or red at a glance.</p></div></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><div><h3>Find anything</h3><p>Trails, lifts, lodges, restrooms and food.</p></div></li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-toggle"/></svg><div><h3>Map key switches</h3><p>Show learning areas, night skiing and race courses.</p></div></li>
+            <li><span class="lamps" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Live Lift Status</h3><p>Green, amber or red at a glance, backed by Real Time data.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-trees"/></svg><div><h3>Glades and trees</h3><p>Wooded areas filled with small trees, glades shaded with their names.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><div><h3>Find anything</h3><p>Trails, lifts, lodges, food and parking. Tap a run for its length.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-toggle"/></svg><div><h3>Map key switches</h3><p>Learning areas, night skiing, race courses and magic carpets.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-image"/></svg><div><h3>4K Terrain Overlay</h3><p>A sharp aerial photo over the 3D map, with the one-time 4K Map Pack.</p></div></li>
           </ul>
-          <div class="maps-list" aria-label="Resorts with GoSki trail maps">
+          <div class="maps-list" aria-label="GoSki trail maps">
             <p class="maps-list__label">Trail maps today</p>
             <ul>
-              <li><b>Killington</b><span>Vermont</span></li>
-              <li><b>Stowe</b><span>Vermont</span></li>
-              <li><b>Heavenly</b><span>California / Nevada</span></li>
-              <li><b>Northstar</b><span>California</span></li>
-              <li><b>Kirkwood</b><span>California</span></li>
-              <li><b>Stevens Pass</b><span>Washington</span></li>
+              <li><b>43 resorts</b><span>Every resort in GoSki</span></li>
+              <li><b>31 U.S.</b><span>Vermont to California</span></li>
+              <li><b>12 Canada</b><span>British Columbia and Alberta</span></li>
+              <li><b>36 in 4K</b><span>With the 4K Map Pack</span></li>
             </ul>
-            <p class="maps-list__more">More maps are on the way.</p>
+            <p class="maps-list__more"><a class="link" href="/trail-maps/">See every trail map</a></p>
           </div>
         </div>
         <div class="chapter__art art-single" data-track-anchor>
           <figure class="phone phone--hero" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/map-stowe.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Stowe's trail map in 3D below Mount Mansfield, with lifts, trails, lodges and buttons for parking, restrooms and food.">
+              <img src="assets/screens/map-stowe-3d-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Stowe’s 3D trail map below Mount Mansfield and Spruce Peak, with lifts, lift lights, trails and lodges.">
               <span class="phone__status phone__status--dark" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
@@ -242,25 +290,28 @@
     <section class="chapter" id="record" aria-labelledby="record-title">
       <div class="chapter__inner">
         <div class="chapter__copy" data-reveal>
-          <p class="marker marker--plain">Ski day recording</p>
+          <p class="marker marker--plain">Ski Tracker</p>
           <h2 id="record-title">Make every run count.</h2>
-          <p class="lead">Tap Start Ski Day and put your phone away. GoSki turns your GPS route into estimated runs, vertical, distance and time, and at resorts with GoSki trail maps it names the trails each run followed.</p>
+          <p class="lead">Tap Start and put your phone away. GoSki knows which resort you&rsquo;re at, splits your day into runs and lift rides, measures vertical with your iPhone&rsquo;s barometer, and names every run by the trails it followed at all 43 resorts.</p>
           <ul class="ticks">
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Keeps recording with the screen locked</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Starts and names runs without signal</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Lift rides never count as vertical</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Encrypted on your iPhone, never uploaded</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Included with GoSki Pass</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Included with GoSki PRO</li>
           </ul>
+          <p class="chapter__more"><a class="link" href="/ski-tracker/">How the Ski Tracker works</a></p>
         </div>
         <div class="chapter__art art-pair" data-track-anchor>
           <figure class="phone phone--back" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/session-runs.webp" width="720" height="1561" loading="lazy" decoding="async" alt="The day's latest runs, each listed with the Killington trails it followed, such as Nivis Walk, Launch Pad and Bear Trax.">
+              <img src="assets/screens/session-runs-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Run 15 at Killington listed trail by trail, from Chute and Bunny Buster to Cascade and Flume, each with its rating and length, plus the run’s vertical, distance and top speed.">
               <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
           <figure class="phone phone--front" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/session.webp" width="720" height="1561" loading="lazy" decoding="async" alt="A ski day in progress at Killington with Pause and Finish day buttons and live totals.">
+              <img src="assets/screens/session-start-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="The Session tab: a big round Start button with PRO Active, Works Offline and Private, this season’s totals and the last ski day.">
               <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
@@ -273,16 +324,40 @@
         <div class="chapter__copy" data-reveal>
           <p class="marker"><svg class="rate" aria-hidden="true"><use href="#r-black"/></svg>Relive it</p>
           <h2 id="relive-title">Every run, every day, the whole season.</h2>
-          <p class="lead">Replay any day on 3D terrain with your route colored by speed, then check the elevation and speed charts. Your season stacks up as you go: ski days, vertical and runs, saved on your phone.</p>
+          <p class="lead">See any day drawn on the resort&rsquo;s trail map with your route colored by speed, then scrub through the elevation and speed graphs. Your season stacks up as you go: ski days, vertical, runs, trails skied and time on snow, saved on your phone.</p>
         </div>
         <div class="chapter__art art-replay" data-track-anchor>
           <figure class="replay-card" data-reveal>
-            <img src="assets/screens/replay-map.webp" width="1047" height="1617" loading="lazy" decoding="async" alt="A ski day's route replayed over 3D terrain at Killington: lift rides in purple, runs shaded from blue to gold by speed.">
+            <img src="assets/screens/replay-map-v2.webp" width="1047" height="1617" loading="lazy" decoding="async" alt="A ski day’s route at Killington on the 3D trail map, colored by speed from green to red, with lift rides in gray.">
             <figcaption><span class="swatch swatch--lift"></span>Lift <span class="swatch swatch--speed"></span>Slow to fast</figcaption>
           </figure>
           <figure class="phone phone--overlap" data-reveal>
             <div class="phone__screen">
-              <img src="assets/screens/you.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Your profile: an 11-day season with 192,254 feet of vertical and 147 runs, and an activity log of saved days.">
+              <img src="assets/screens/you-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="The You tab: an 11-day season with 192,263 feet of vertical and 147 runs, 39 Killington trails skied, and the activity log.">
+              <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="alerts" aria-labelledby="alerts-title">
+      <div class="chapter__inner">
+        <div class="chapter__copy" data-reveal>
+          <p class="marker marker--plain">Alerts</p>
+          <h2 id="alerts-title">Know before you go.</h2>
+          <p class="lead">Alerts backed by Real Time data when a lift at the resort you&rsquo;re skiing goes on hold, is delayed or closes early. Storms told in parts, from the first sign in the forecast to the final word the day before. By app notification or email.</p>
+          <ul class="features">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg><div><h3>Day Alerts</h3><p>Lift holds, delays and closures, Resort Updates through the day and a 3 PM Apr&egrave;s message. GoSki PRO.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-storm"/></svg><div><h3>Storm Alerts</h3><p>New Storm Outlook, Snowfall Update, Watches &amp; Warnings and a Final Update, built on trusted NOAA forecasts. Each storm&rsquo;s first alert is free.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"/></svg><div><h3>Snow Alert</h3><p>Free, the moment snow first shows up in a resort&rsquo;s 7-day forecast.</p></div></li>
+          </ul>
+          <p class="chapter__more"><a class="link" href="/alerts/">More about alerts</a></p>
+        </div>
+        <div class="chapter__art art-single" data-track-anchor>
+          <figure class="phone phone--hero" data-reveal>
+            <div class="phone__screen">
+              <img src="assets/screens/resort-forecast-v2.webp" width="720" height="1561" loading="lazy" decoding="async" alt="Killington’s forecast in 6-hour blocks above the Storm Alerts card, with the latest alert: a new storm in the forecast, about 8 inches Friday to Saturday.">
               <span class="phone__status" aria-hidden="true"><b>9:41</b><i></i></span>
             </div>
           </figure>
@@ -294,8 +369,11 @@
       <div class="more__inner">
         <h2 id="more-title" data-reveal>More mountain. Less guesswork.</h2>
         <ul class="cards">
-          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><h3>Beyond the boundary</h3><p>Search U.S. places, plan a backcountry route and download map areas for when there&rsquo;s no signal.</p></li>
-          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-mug"/></svg><h3>After last chair</h3><p>Apr&egrave;s-ski spots on the mountain and nearby, plus events, at supported resorts.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-ticket"/></svg><h3>Your ski pass</h3><p>Add your Epic, Ikon, Indy or Mountain Collective pass to see its resorts and blackout dates on a calendar.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-news"/></svg><h3>Resort news</h3><p>New lifts, snowmaking, opening days, events and deals for the ski regions you pick.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-mug"/></svg><h3>After last chair</h3><p>Food &amp; Apr&egrave;s Ski top picks on the mountain and nearby at U.S. resorts.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg><h3>Tickets and night skiing</h3><p>Lift ticket prices with a quick link to buy, and night skiing noted for every resort.</p></li>
+          <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><h3>Beyond the boundary</h3><p>Search U.S. places, plan a backcountry route with an estimated hike time and download map areas for when there&rsquo;s no signal.</p></li>
           <li class="card" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg><h3>30-day trends</h3><p>Snowfall, base depth and open lifts and trails over the past month.</p></li>
         </ul>
       </div>
@@ -304,18 +382,20 @@
     <section class="pass" id="pass" aria-labelledby="pass-title">
       <div class="pass__inner">
         <div class="pass__copy" data-reveal>
-          <p class="eyebrow">GoSki Pass</p>
+          <p class="eyebrow">GoSki PRO</p>
           <h2 id="pass-title">A better line on your next ski day.</h2>
-          <p class="lead">GoSki is free to download and use. A GoSki Pass adds the extras on the ticket, weekly or monthly. Two ways up, same perks. Prices are shown in the app.</p>
+          <p class="lead">GoSki is free to download and use. GoSki PRO adds the extras on the ticket, weekly or monthly. Two ways up, same perks. Prices are shown in the app.</p>
+          <p class="chapter__more"><a class="link" href="/pro/">Compare Free and GoSki PRO</a></p>
         </div>
         <div class="ticket" data-reveal>
           <div class="ticket__main">
-            <span class="ticket__stamp">GoSki Pass</span>
+            <span class="ticket__stamp">GoSki PRO</span>
             <ul class="ticket__perks">
-              <li><b>See the next storm.</b><span>7-day hourly forecasts</span></li>
+              <li><b>Make every run count.</b><span>Ski Tracker on iPhone</span></li>
+              <li><b>Know the mountain.</b><span>3D trail maps at all 43 resorts</span></li>
+              <li><b>Never miss a lift.</b><span>Day Alerts &amp; every Storm Alert</span></li>
+              <li><b>See the next storm.</b><span>The full 6-day forecast</span></li>
               <li><b>Read the snow.</b><span>30-day snow &amp; terrain trends</span></li>
-              <li><b>Know the mountain.</b><span>Premium resort visuals</span></li>
-              <li><b>Make every run count.</b><span>Ski day recording on iPhone</span></li>
             </ul>
           </div>
           <div class="ticket__stub" aria-hidden="true">
@@ -324,7 +404,7 @@
             <span class="ticket__small">Two ways up. Same perks.</span>
           </div>
         </div>
-        <p class="fine pass__fine">Subscriptions renew automatically until canceled in your App Store account settings.</p>
+        <p class="fine pass__fine">Subscriptions renew automatically until canceled in your App Store account settings. The 4K Map Pack is a separate one-time purchase.</p>
       </div>
     </section>
 
@@ -332,11 +412,25 @@
       <div class="privacy__inner">
         <h2 id="privacy-title" data-reveal>Your ski days stay yours.</h2>
         <ul class="privacy__list">
-          <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><h3>No password</h3><p>Sign in with a 6-digit code sent to your email.</p></li>
+          <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><h3>No password</h3><p>Sign in with a 6-digit code sent to your email, or with Apple on iPhone.</p></li>
           <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><h3>Encrypted on your phone</h3><p>Ski recordings stay on your device and are never uploaded.</p></li>
           <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-eye-off"/></svg><h3>No ad tracking</h3><p>GoSki doesn&rsquo;t sell your data or track you across apps for ads.</p></li>
         </ul>
         <a class="link-quiet" href="https://privacy.goskiapp.com/">Read the privacy policy <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <section class="explore" aria-labelledby="explore-title">
+      <div class="explore__inner">
+        <h2 id="explore-title" data-reveal>Explore GoSki</h2>
+        <ul class="cards cards--links">
+          <li data-reveal><a class="card" href="/ski-tracker/"><h3>Ski Tracker</h3><p>How GoSki records runs, vertical and speed, and names every run by trail.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li data-reveal><a class="card" href="/trail-maps/"><h3>Trail Maps</h3><p>2D and 3D trail maps of all 43 resorts, with trail and lift counts.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li data-reveal><a class="card" href="/resorts/"><h3>Resorts</h3><p>All 43 resorts in GoSki, from Vermont and Colorado to British Columbia.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li data-reveal><a class="card" href="/features/"><h3>Features</h3><p>Everything in GoSki in one list, and what&rsquo;s free.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li data-reveal><a class="card" href="/whats-new/"><h3>What&rsquo;s New</h3><p>The latest GoSki updates, newest first.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+          <li data-reveal><a class="card" href="/faq/"><h3>FAQ</h3><p>Short answers about pricing, tracking, offline use and privacy.</p><span class="more-link">Read more <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+        </ul>
       </div>
     </section>
 
@@ -345,7 +439,7 @@
         <img class="finale__icon" src="assets/icon/icon-256.webp" width="112" height="112" alt="" loading="lazy">
         <h2 id="finale-title">See you at first chair.</h2>
         <p class="lead">GoSki is free on the App Store for iPhone and iPad.</p>
-        <a class="store-badge store-badge--lg" href="https://apps.apple.com/us/app/goski-resorts/id6759206548">
+        <a class="store-badge store-badge--lg" href="https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548">
           <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?size=250x83" width="180" height="60" alt="Download on the App Store" loading="lazy">
         </a>
       </div>
@@ -365,20 +459,33 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
-        <img src="assets/icon/icon-64.png" width="40" height="40" alt="" loading="lazy">
-        <div><b>GoSki</b><span>Snow, maps &amp; ski day tracking</span></div>
+        <img src="/assets/icon/icon-64.png" width="40" height="40" alt="" loading="lazy">
+        <div><b>GoSki</b><span>Ski tracker, trail maps &amp; snow forecasts</span></div>
       </div>
-      <nav class="footer__links" aria-label="Help and legal">
-        <a href="https://privacy.goskiapp.com/support/">Support</a>
-        <a href="https://privacy.goskiapp.com/">Privacy Policy</a>
-        <a href="/terms/">Terms of Use</a>
-        <a href="mailto:goskiapp@gmail.com">goskiapp@gmail.com</a>
-      </nav>
+      <div class="footer__navs">
+        <nav class="footer__links" aria-label="About GoSki">
+          <a href="/features/">Features</a>
+          <a href="/ski-tracker/">Ski Tracker</a>
+          <a href="/trail-maps/">Trail Maps</a>
+          <a href="/alerts/">Alerts</a>
+          <a href="/resorts/">Resorts</a>
+          <a href="/pro/">GoSki PRO</a>
+          <a href="/whats-new/">What’s New</a>
+          <a href="/guides/">Guides</a>
+          <a href="/faq/">FAQ</a>
+        </nav>
+        <nav class="footer__links footer__links--quiet" aria-label="Help and legal">
+          <a href="https://privacy.goskiapp.com/support/">Support</a>
+          <a href="https://privacy.goskiapp.com/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
+          <a href="mailto:goskiapp@gmail.com">goskiapp@gmail.com</a>
+        </nav>
+      </div>
       <div class="footer__fine">
-        <p>App screens show sample winter conditions. GoSki is independent and isn&rsquo;t affiliated with or endorsed by any resort; resort names belong to their owners.</p>
-        <p>Map data in the app screens: &copy; OpenStreetMap contributors, OpenMapTiles, OpenSkiMap, Skimap.org, Mapterhorn, Mapzen terrain, USGS. Snowfall analysis: NOAA.</p>
+        <p>App screens show sample winter conditions. GoSki is independent and isn’t affiliated with or endorsed by any resort; resort names belong to their owners.</p>
+        <p>Map data in the app: © OpenStreetMap contributors, OpenMapTiles, OpenSkiMap, Skimap.org, Mapterhorn, Mapzen terrain, USGS. Snowfall analysis: NOAA.</p>
         <p>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
-        <p>&copy; 2026 GoSki. GoSki is operated by RAK Industries LLC.</p>
+        <p>© 2026 GoSki. GoSki is operated by RAK Industries LLC.</p>
       </div>
     </div>
   </footer>
