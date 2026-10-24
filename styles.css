@@ -970,13 +970,6 @@ main { position: relative; display: block; overflow-x: hidden; overflow-x: clip;
 .table-wrap { overflow-x: auto; margin-top: 16px; border: 1px solid var(--card-line); border-radius: 18px; background: var(--card); }
 .section h2 + .table-wrap { margin-top: 28px; }
 .compare { width: 100%; border-collapse: collapse; font-size: .96rem; }
-.compare--maps { min-width: 560px; }
-@media (max-width: 600px) {
-  .compare { font-size: .88rem; }
-  .compare th, .compare td { padding: 11px 10px; }
-  .compare:not(.compare--maps) thead th:first-child { width: 46%; }
-  .compare thead th { letter-spacing: .08em; }
-}
 .compare th, .compare td { padding: 13px 16px; border-bottom: 1px solid rgba(255, 255, 255, .07); text-align: left; vertical-align: top; }
 .compare thead th { color: var(--slate-400); font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .compare tbody th { font-weight: 600; line-height: 1.45; }
@@ -985,11 +978,18 @@ main { position: relative; display: block; overflow-x: hidden; overflow-x: clip;
 .compare td.yes .icon { width: 22px; height: 22px; color: var(--emerald-300); stroke-width: 2.4; }
 .compare td.no { color: var(--slate-500); }
 .compare tr:last-child > * { border-bottom: 0; }
+.compare__sub { display: block; margin-top: 2px; color: var(--slate-400); font-size: .85rem; font-weight: 400; }
 .compare--maps { table-layout: fixed; }
-.compare--maps th:nth-child(1) { width: 32%; }
-.compare--maps th:nth-child(2) { width: 34%; }
-.compare--maps th:nth-child(n + 3) { width: 12%; }
-.compare--maps td:nth-child(n + 3) { font-variant-numeric: tabular-nums; }
+.compare--maps th:first-child { width: 52%; }
+.compare--maps th:nth-child(n + 2) { width: 16%; }
+.compare--maps td { font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .compare { font-size: .88rem; }
+  .compare th, .compare td { padding: 11px 10px; }
+  .compare:not(.compare--maps) thead th:first-child { width: 46%; }
+  .compare thead th { letter-spacing: .06em; }
+  .compare--maps thead th { font-size: .64rem; }
+}
 .table-note { margin-top: 14px; }
 
 .resort-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
