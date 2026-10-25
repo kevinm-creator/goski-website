@@ -100,3 +100,4 @@ Key facts (updated 2026-10-24):
 - [Privacy Policy](https://privacy.goskiapp.com/)
 - [Support](https://privacy.goskiapp.com/support/)
 - [Terms of Use](https://goskiapp.com/terms/)
+- [Delete your GoSki account](https://goskiapp.com/delete-account/): delete in the app or by email, what gets deleted and what stays
