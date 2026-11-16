@@ -1042,3 +1042,33 @@ main { position: relative; display: block; overflow-x: hidden; overflow-x: clip;
 .explore__inner { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
 .explore h2 { font-size: clamp(2rem, 4vw, 3.1rem); text-align: center; }
 .explore .section-intro { margin: 14px auto 0; text-align: center; }
+
+/* ---------- 2026-11-16: both store badges, "Coming soon" tags, the Conditions page ---------- */
+/* Every "get GoSki" spot shows the App Store and Google Play together. Google's badge PNG has clear space built in,
+   so it is drawn taller and pulled in by that space: its visible badge then matches Apple's height. */
+.store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.store-badge--play img { height: 77px; margin: -13px; }
+.store-badge--play.store-badge--lg img { height: 89px; margin: -15px; }
+.cta-band .store-badges, .finale .store-badges { justify-content: center; margin-top: 30px; }
+.cta-band .store-badges .store-badge, .finale .store-badges .store-badge { margin-top: 0; }
+@media (max-width: 999px) { .hero__cta .store-badges { justify-content: center; } }
+.soon-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  border: 1px solid rgba(56, 189, 248, .45);
+  border-radius: 999px;
+  background: rgba(56, 189, 248, .12);
+  color: var(--sky-300);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.eyebrow .soon-tag { margin-left: 2px; }
+.prose .cond-short { color: var(--slate-50); font-size: 1.16rem; font-weight: 600; line-height: 1.5; }
+.section-more { margin-top: 20px; }
+.faq__item h3 { font-size: 1.12rem; letter-spacing: -.015em; line-height: 1.3; }
