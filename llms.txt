@@ -11,7 +11,7 @@ Key facts (updated 2026-11-16):
 - GoSki PRO: Ski Tracker, 3D trail maps everywhere, full 6-day forecast, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
 - Ski Tracker: one-tap start, the resort is recognized automatically, steady barometer-backed vertical, lift rides never counted as vertical, runs named by trail and drawn on GoSki's trail map, speed heat map, elevation and speed graphs, works without cell signal, recordings encrypted on the iPhone and never uploaded.
 - Weather: high-quality forecasts from trusted sources: NOAA and the National Weather Service (U.S.), NOAA with Environment Canada weather alerts (Canada). Snowfall maps and the Snow leaderboard use NOAA snowfall data.
-- Conditions on the 3D trail map (coming in the next update; not in the app yet): wind, powder, sun, snow depth and how soft the snow is, hour by hour through the week (GoSki PRO). Wind: How windy it is on every slope, and where it's calm. Powder Zone: Where the wind piled up fresh snow after a storm. Sun: Which runs are in the sun and which are in the shade, hour by hour. Snow depth: How much snow is on the ground, how much just fell and how much is coming. Surface Conditions: Where the snow is firm, soft or heavy through the day, and where to ski when.
+- Conditions on the 3D trail map (in GoSki 2.3.0 on iPhone and iPad; coming to Google Play): wind, powder, sun, snow depth and how soft the snow is, hour by hour through the week (GoSki PRO). Wind: How windy it is on every slope, and where it's calm. Powder Zone: Where the wind piled up fresh snow after a storm. Sun: Which runs are in the sun and which are in the shade, hour by hour. Snow depth: How much snow is on the ground, how much just fell and how much is coming. Surface Conditions: Where the snow is firm, soft or heavy through the day, and where to ski when.
 - Ski passes: add an Epic, Ikon, Indy or Mountain Collective pass to see covered resorts and blackout dates.
 - Sign-in: 6-digit email code or Sign in with Apple. No password.
 - Independent: not affiliated with or endorsed by any resort. Operated by RAK Industries LLC.
@@ -23,7 +23,7 @@ Key facts (updated 2026-11-16):
 - [Features](https://goskiapp.com/features/): every GoSki feature in one list
 - [Ski Tracker](https://goskiapp.com/ski-tracker/): how the GPS ski tracker records, measures and names runs
 - [Trail Maps](https://goskiapp.com/trail-maps/): 2D and 3D trail maps of all 67 resorts, with trail and lift counts
-- [Conditions](https://goskiapp.com/conditions/): Wind, Powder Zone, Sun, Snow depth and Surface Conditions on the 3D trail map (coming soon)
+- [Conditions](https://goskiapp.com/conditions/): Wind, Powder Zone, Sun, Snow depth and Surface Conditions on the 3D trail map
 - [Alerts](https://goskiapp.com/alerts/): Day Alerts, Storm Alerts, Snow Alert and Resort Updates
 - [GoSki PRO](https://goskiapp.com/pro/): what's free and what's included with GoSki PRO
 - [Resorts](https://goskiapp.com/resorts/): all 67 resorts in GoSki
