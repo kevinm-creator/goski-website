@@ -31,6 +31,7 @@ Key facts (updated 2026-11-16):
 - [What's New](https://goskiapp.com/whats-new/): the latest updates
 - [Why ski tracker numbers differ](https://goskiapp.com/guides/ski-tracker-accuracy/): what vertical means, why GPS height drifts and what to look for in a tracker
 - [What to look for in a ski app](https://goskiapp.com/guides/choosing-a-ski-app/): a checklist for choosing a ski tracker and resort app
+- [GoSki Stories](https://goskiapp.com/stories/): stories about snow science and ski resorts, starting with how resorts save last winter's snow under sawdust
 
 ## Resorts
 
