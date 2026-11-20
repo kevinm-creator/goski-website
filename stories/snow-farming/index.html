@@ -144,7 +144,7 @@
 <figure class="story-figure story-diagram">
   <svg viewBox="0 0 600 520" role="img" aria-labelledby="sawdust-title sawdust-desc">
     <title id="sawdust-title">How wet sawdust keeps a snow pile through summer</title>
-    <desc id="sawdust-desc">A snow pile under a 40 centimeter layer of wet sawdust. The sun heats the wet sawdust, and that heat goes back out into the air as the water evaporates. Only a little heat reaches the snow, about twelve times less. Meltwater wicks back up and keeps the sawdust wet.</desc>
+    <desc id="sawdust-desc">A cross-section of a snow pile under a 40 centimeter layer of wet sawdust. The sun heats the wet sawdust, water evaporating from it carries the heat away, meltwater wicks back up and keeps it wet, and the snow underneath gets about twelve times less heat.</desc>
     <defs>
       <linearGradient id="sd-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13284a"/><stop offset="1" stop-color="#0c1a2e"/></linearGradient>
       <linearGradient id="sd-snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#d6e6f7"/></linearGradient>
@@ -165,24 +165,31 @@
       <path d="M70 26V16M70 120V110M28 68H18M122 68H112M40 38l-7-7M100 98l7 7M40 98l-7 7M100 38l7-7"/>
     </g>
     <circle cx="70" cy="68" r="27" fill="#fbbf24"/>
-    <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M121 98L175 226L183 236"/><path d="M214 98L250 182L255 196"/><path d="M292 98L325 175L322 189"/></g>
+    <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round" fill="none" marker-end="url(#sd-sun-head)">
+      <path d="M96 104L160 213"/><path d="M110 96L212 180"/><path d="M124 86L252 164"/>
+    </g>
     <text x="134" y="58" fill="#fde68a" font-size="22" font-weight="700">Sun heats the</text>
     <text x="134" y="84" fill="#fde68a" font-size="22" font-weight="700">wet sawdust</text>
     <!-- evaporation -->
-    <g stroke="#bae6fd" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" marker-end="url(#sd-vap-head)"><path d="M183 236Q205 232 217 212L210 202c-9 -12.3 9 -24.6 0 -36.9s9 -24.6 0 -36.9"/><path d="M255 196Q269 202 278 189L275 175c-9 -7.8 9 -15.7 0 -23.5s9 -15.7 0 -23.5"/><path d="M322 189Q330 202 343 195L347 182c-9 -8.9 9 -17.8 0 -26.8s9 -17.8 0 -26.8"/></g>
+    <g stroke="#bae6fd" stroke-width="3.5" stroke-linecap="round" fill="none" marker-end="url(#sd-vap-head)">
+      <path d="M340 166c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/><path d="M380 182c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/><path d="M428 214c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/>
+    </g>
     <text x="585" y="58" fill="#bae6fd" font-size="22" font-weight="700" text-anchor="end">Water evaporates and</text>
     <text x="585" y="84" fill="#bae6fd" font-size="22" font-weight="700" text-anchor="end">carries the heat away</text>
     <!-- meltwater wicking back up into the chips -->
-    <g fill="#22d3ee"><path d="M84 352C90 360 91 367 84 369C77 367 78 360 84 352Z"/><path d="M107 317C113 325 114 332 107 334C100 332 101 325 107 317Z"/><path d="M132 287C138 295 139 302 132 304C125 302 126 295 132 287Z"/><path d="M468 287C474 295 475 302 468 304C461 302 462 295 468 287Z"/><path d="M493 317C499 325 500 332 493 334C486 332 487 325 493 317Z"/><path d="M516 352C522 360 523 367 516 369C509 367 510 360 516 352Z"/></g>
-    <path d="M520 430L497 339" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 5"/>
+    <g stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" fill="none" marker-end="url(#sd-blue-head)">
+      <path d="M435 280L450 262"/><path d="M458 303L476 291"/><path d="M481 330L502 322"/>
+      <path d="M165 280L150 262"/><path d="M142 303L124 291"/>
+    </g>
+    <path d="M512 430L497 346" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 5"/>
     <text x="585" y="452" fill="#7dd3fc" font-size="22" font-weight="700" text-anchor="end">Meltwater wicks back up</text>
     <text x="585" y="478" fill="#7dd3fc" font-size="22" font-weight="700" text-anchor="end">and keeps it wet</text>
     <!-- the layer -->
-    <path d="M62 430L105 339" stroke="#e7c08f" stroke-width="2" stroke-dasharray="4 5"/>
+    <path d="M62 430L100 340" stroke="#e7c08f" stroke-width="2" stroke-dasharray="4 5"/>
     <text x="18" y="452" fill="#f0d2a8" font-size="22" font-weight="700">40 cm of</text>
     <text x="18" y="478" fill="#f0d2a8" font-size="22" font-weight="700">wet sawdust</text>
     <!-- only a trickle of heat gets through -->
-    <path d="M270 205L284 254" stroke="#fb923c" stroke-width="3" stroke-dasharray="3 6" stroke-linecap="round" marker-end="url(#sd-heat-head)"/>
+    <path d="M300 142V232" stroke="#fb923c" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round" marker-end="url(#sd-heat-head)"/>
     <text x="300" y="300" fill="#0f172a" font-size="26" font-weight="800" text-anchor="middle">Snow</text>
     <text x="300" y="332" fill="#1e3a5f" font-size="21" font-weight="700" text-anchor="middle">gets about 12×</text>
     <text x="300" y="358" fill="#1e3a5f" font-size="21" font-weight="700" text-anchor="middle">less heat</text>
