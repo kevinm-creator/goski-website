@@ -12,6 +12,9 @@
 .story-hero img, .story-figure img { display: block; width: 100%; height: auto; border-radius: 16px; }
 .story-hero figcaption, .story-figure figcaption { margin-top: 10px; color: var(--slate-400); font-size: .88rem; line-height: 1.5; }
 
+.story-diagram { max-width: 620px; margin-inline: auto; }
+.story-diagram svg { display: block; width: 100%; height: auto; font-family: inherit; }
+
 .story-ad { margin: 36px 0; padding: 12px 0; border-block: 1px solid rgba(255, 255, 255, .08); min-height: 1px; }
 .story-ad > span { display: block; margin-bottom: 8px; color: var(--slate-500); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; text-align: center; }
 
