@@ -22,6 +22,15 @@ GoSki's Facebook posts. They are the only pages on the site that show ads.
 6. After it is live, paste the URL into https://developers.facebook.com/tools/debug/ and press
    "Scrape Again" so Facebook picks up the preview image.
 
+## "See what GoSki does" (every story, automatic)
+
+Every story page ends, after the article, with a section of four big toggle buttons, in this order
+(Kevin, 2026-11-20): **3D Resort Maps**, **Professional Telemetry & Ski Track**, **Mountain Intelligence**,
+**Advanced Forecast**. Each shows real app screens from `/assets/screens/`: the 3D maps; the tracker's live stats,
+route and recorded runs; the Conditions menu with the Wind, Sun, Powder Zone and Snow depth overlays; the resort
+forecast table and the snow forecast map. `build_stories.py` adds it (`TOUR`); stories don't write it in `body.html`.
+To change a screen, add a new 720-px WebP under a new file name and point `TOUR` at it.
+
 ## Ads (Google AdSense)
 
 Set the ids in `stories-src/site.json` and rebuild:

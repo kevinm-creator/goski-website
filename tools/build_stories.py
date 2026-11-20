@@ -27,7 +27,7 @@ SRC = ROOT / "stories-src"
 OUT = ROOT / "stories"
 SITE = "https://goskiapp.com"
 CSS_VERSION = "20261116"
-STORIES_CSS_VERSION = "20261119"  # bump when stories/stories.css changes
+STORIES_CSS_VERSION = "20261120"  # bump when stories/stories.css changes
 
 
 def load_shell():
@@ -120,6 +120,109 @@ def stories_footer_note():
             '<a href="/ads-and-cookies/">Ads and cookies</a></p>')
 
 
+# The "See what GoSki does" section at the bottom of every story (Kevin, 2026-11-20).
+# Big toggle buttons, in this order, each showing real app screens from /assets/screens/.
+# Each screen: (file, width, height, title, caption, alt).
+TOUR = [
+    ("maps", "3D Resort Maps", "/trail-maps/", "See every trail map",
+     '<path d="m8 3 4 8 5-5 5 15H2L8 3z"/>',
+     "Every trail and lift on real 3D terrain. Spin, tilt and zoom to see how steep a run is before you ride it.",
+     [("map-killington-3d-v2.webp", 720, 1561, "Killington, Vermont", "Trails, lifts and lodges on the 3D map.",
+       "Killington 3D trail map in the GoSki app"),
+      ("map-stowe-3d-v2.webp", 720, 1561, "Stowe, Vermont", "Tilt and turn the mountain to read the fall line.",
+       "Stowe 3D trail map in the GoSki app")]),
+    ("track", "Professional Telemetry & Ski Track", "/ski-tracker/", "How the Ski Tracker works",
+     '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+     "The Ski Tracker follows your day: vertical, speed, distance and time, with every run drawn on the resort map and matched to the trails you skied.",
+     [("session-live-v2.webp", 720, 1561, "Live stats", "Vertical, altitude, speed and distance while you ski.",
+       "GoSki Ski Tracker showing vertical skied, altitude, distance and top speed"),
+      ("session-route-v2.webp", 720, 1561, "Your route", "Every run on the map, colored by speed.",
+       "A ski day's route drawn on the Killington trail map, colored by speed"),
+      ("session-runs-v2.webp", 720, 1561, "Every run", "Matched to the trails you skied, with vertical and top speed.",
+       "A recorded run in GoSki with the list of trails it followed")]),
+    ("intel", "Mountain Intelligence", "/conditions/", "About Conditions",
+     '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>'
+     '<path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+     "Conditions on the 3D map: where the wind is strongest, which slopes are in the sun, where the wind piles powder or blows slopes bare, and how deep the snow is.",
+     [("conditions-card-v2.webp", 720, 1564, "Conditions", "Wind, Powder Zone, Sun, Snow depth and Surface Conditions.",
+       "The Conditions menu on the GoSki 3D map"),
+      ("conditions-wind-v2.webp", 720, 1564, "Wind", "Wind speed and the windiest spots, hour by hour.",
+       "Wind overlay on the Killington-Pico 3D map"),
+      ("conditions-sun-v2.webp", 720, 1564, "Sun", "Sun and shade on every slope through the day.",
+       "Sun overlay on the Killington-Pico 3D map"),
+      ("conditions-powder-v2.webp", 720, 1564, "Powder Zone", "Where the wind piles snow and where it strips slopes bare.",
+       "Powder Zone overlay on the Killington-Pico 3D map"),
+      ("conditions-snow-depth-v2.webp", 720, 1564, "Snow depth", "Snow on the ground and new snow.",
+       "Snow depth overlay on the Killington-Pico 3D map")]),
+    ("forecast", "Advanced Forecast", "/features/#snow", "Snow forecasts and reports",
+     '<path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.24"/><path d="M8 15h.01"/><path d="M8 19h.01"/>'
+     '<path d="M12 17h.01"/><path d="M12 21h.01"/><path d="M16 15h.01"/><path d="M16 19h.01"/>',
+     "Snow, rain, temperature and wind for the days ahead at every resort, and a map of where the next storm's snow will fall. Source: NOAA.",
+     [("resort-forecast-v2.webp", 720, 1561, "Resort forecast", "Snow, rain, temperature and wind, hour by hour.",
+       "The Killington forecast chart and table in GoSki"),
+      ("forecast-map-v1.webp", 720, 1561, "Snow forecast map", "Where snow will fall over the next 48 hours.",
+       "GoSki's snow forecast map over Utah, Idaho and Montana")]),
+]
+
+TOUR_SCRIPT = """<script>
+(function () {
+  var tabs = [].slice.call(document.querySelectorAll('.tour-tab'));
+  if (!tabs.length) return;
+  function show(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(t); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key, j = k === 'ArrowRight' || k === 'ArrowDown' ? i + 1 : k === 'ArrowLeft' || k === 'ArrowUp' ? i - 1 : k === 'Home' ? 0 : k === 'End' ? tabs.length - 1 : null;
+      if (j === null) return;
+      e.preventDefault();
+      show(tabs[(j + tabs.length) % tabs.length], true);
+    });
+  });
+  show(tabs[0]);
+})();
+</script>"""
+
+
+def tour_section():
+    buttons, panels = [], []
+    for i, (key, label, href, more, icon, lead, shots) in enumerate(TOUR):
+        on = i == 0
+        buttons.append(
+            f'<button type="button" class="tour-tab" role="tab" id="tour-tab-{key}" aria-controls="tour-{key}" '
+            f'aria-selected="{"true" if on else "false"}" tabindex="{0 if on else -1}">'
+            f'<svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg><span>{esc(label)}</span></button>')
+        phones = "".join(
+            f'<figure class="tour-phone"><img src="/assets/screens/{f}" width="{w}" height="{h}" loading="lazy" alt="{esc(alt)}">'
+            f'<figcaption><strong>{esc(title)}</strong>{esc(cap)}</figcaption></figure>'
+            for f, w, h, title, cap, alt in shots)
+        panels.append(
+            f'<div class="tour-panel" id="tour-{key}" role="tabpanel" aria-labelledby="tour-tab-{key}" tabindex="0">'
+            f'<p class="tour-panel__lead">{esc(lead)}</p>'
+            f'<div class="tour-phones">{phones}</div>'
+            f'<a class="tour-more" href="{href}">{esc(more)} <span aria-hidden="true">→</span></a></div>')
+    return f"""<section class="section story-tour" aria-labelledby="tour-title">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--center">The GoSki app</p>
+        <h2 id="tour-title">See what GoSki does</h2>
+        <p class="lead tour-lead">Tap a feature to see real screens from the app.</p>
+        <div class="tour-tabs" role="tablist" aria-label="GoSki features">{"".join(buttons)}</div>
+        {"".join(panels)}
+        <p class="tour-note">Some features require <a href="/pro/">GoSki PRO</a>.</p>
+      </div>
+    </section>
+    {TOUR_SCRIPT}
+
+    """
+
+
 def build_story(slug, meta, body, site, top, bottom):
     url = f"{SITE}/stories/{slug}/"
     image = f"{SITE}/stories/{slug}/{meta['og_image']}"
@@ -161,6 +264,7 @@ def build_story(slug, meta, body, site, top, bottom):
     </article>
 
     """
+    page += tour_section()
     page += bottom
     dest = OUT / slug / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
