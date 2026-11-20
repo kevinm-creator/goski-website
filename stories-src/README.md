@@ -16,6 +16,12 @@ GoSki's Facebook posts. They are the only pages on the site that show ads.
    Put `<!-- AD -->` where an in-article ad may go (about every 3 to 4 paragraphs, never more than 3).
    End with a "See these mountains in 3D" section of GoSki 3D map screens for resorts relevant to
    the story (`.story-3d` / `.story-phones`, as in snow-farming), each linking to its `/resorts/<id>/` page.
+   **Explainer visuals** (Kevin, 2026-11-20: "most people are visual and do not want to read that much, so if we could
+   include small visuals that match the reading ... But not just adding images just to add"): where one idea in the
+   story is a mechanism that is easier to see than read, draw one small diagram of it right after that paragraph,
+   using only what the text says (inline SVG `figure.story-figure.story-diagram`, short labels readable at phone
+   width, one-line caption). Usually one per story; skip it when no idea needs it. Example: the wet-sawdust diagram in
+   snow-farming.
 4. Put the images in `stories/<slug>/` (JPEG, about 1200 px wide for photos, under 500 KB each).
 5. Run `python3 tools/build_stories.py`. It writes the story page, the Stories list, the sitemap
    entries and `ads-and-cookies/`. Commit the source and the built files together.
