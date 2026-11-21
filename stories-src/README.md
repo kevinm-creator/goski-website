@@ -10,6 +10,9 @@ GoSki's Facebook posts. They are the only pages on the site that show ads.
    - `title`, `description` (Facebook and Google show it), `dek` (line under the headline),
      `kicker` (small label above the headline), `date` (YYYY-MM-DD), optional `updated`.
    - `og_image`: the 1200x630 image Facebook shows in the link preview.
+   - `share_title`, `share_description` (optional): what Facebook's link card says, if it should differ from the
+     headline. Use them when the post asks a question the headline answers (Kevin, 2026-11-21: the card under a
+     "What is this?" post must not name the answer). Search still uses `title` and `description`.
    - `card_image` and `card_image_alt`: the picture on the Stories list.
    - `"draft": true` keeps a story out of the build.
 3. Write `stories-src/<slug>/body.html`: only the article body (figures, paragraphs, `<h2>`/`<h3>`).
@@ -29,8 +32,9 @@ GoSki's Facebook posts. They are the only pages on the site that show ads.
 4. Put the images in `stories/<slug>/` (JPEG, about 1200 px wide for photos, under 500 KB each).
 5. Run `python3 tools/build_stories.py`. It writes the story page, the Stories list, the sitemap
    entries and `ads-and-cookies/`. Commit the source and the built files together.
-6. After it is live, paste the URL into https://developers.facebook.com/tools/debug/ and press
-   "Scrape Again" so Facebook picks up the preview image.
+6. After it is live, and BEFORE the link goes in a Facebook comment, paste the URL into
+   https://developers.facebook.com/tools/debug/ and press "Scrape Again". A link Facebook has never read gets no
+   preview card in the comment (seen 2026-11-21 on snow-farming).
 
 ## "See what GoSki does" (every story, automatic)
 

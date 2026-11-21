@@ -65,8 +65,13 @@ def ad_slot(site):
             '<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></aside>')
 
 
-def head(title, description, url, image, image_w, image_h, og_type, site, extra_ld=None):
+def head(title, description, url, image, image_w, image_h, og_type, site, extra_ld=None,
+         share_title=None, share_description=None):
+    # share_*: what Facebook's link card shows (og:title / og:description). A story's card can ask the question
+    # instead of naming the answer, while <title> and the meta description keep the headline for search.
     ld = extra_ld or {}
+    share_title = share_title or title
+    share_description = share_description or description
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -83,8 +88,8 @@ def head(title, description, url, image, image_w, image_h, og_type, site, extra_
   <meta property="og:type" content="{og_type}">
   <meta property="og:url" content="{url}">
   <meta property="og:site_name" content="GoSki">
-  <meta property="og:title" content="{esc(title)}">
-  <meta property="og:description" content="{esc(description)}">
+  <meta property="og:title" content="{esc(share_title)}">
+  <meta property="og:description" content="{esc(share_description)}">
   <meta property="og:image" content="{image}">
   <meta property="og:image:width" content="{image_w}">
   <meta property="og:image:height" content="{image_h}">
@@ -299,7 +304,7 @@ def build_story(slug, meta, body, site, top, bottom):
          "mainEntityOfPage": url}]}
     page = head(meta["title"], meta["description"], url, image,
                 meta.get("og_image_width", 1200), meta.get("og_image_height", 630),
-                "article", site, ld)
+                "article", site, ld, meta.get("share_title"), meta.get("share_description"))
     page += top.replace('<body class="subpage">', '<body class="subpage story-page">')
     page += f"""<main id="main">
     <article class="story">
