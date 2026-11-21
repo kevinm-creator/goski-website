@@ -5,10 +5,10 @@
 Key facts (updated 2026-11-16):
 
 - Platforms: iPhone and iPad (App Store, iOS 15 or later) and Android phones (Google Play, Android 7.0 or later).
-- Price: free to download and use. GoSki PRO is an optional weekly or monthly subscription (prices shown in the app). The 4K Map Pack is a separate one-time purchase.
+- Price: free to download and use. GoSki PRO is an optional weekly or monthly subscription (prices shown in the app).
 - Resorts: 67 (54 U.S., 13 Canada). Every one has a GoSki trail map in 2D and 3D.
-- Free: snow reports, the next 24 hours of forecast, snowfall maps and the Snow leaderboard (U.S.), 2D Basic trail maps of every resort plus 3 free 3D maps (24 hours each), Live Lift Status, the Snow Alert, each storm's first alert, ski news, Food & Apres Ski, ski pass calendars, lift ticket links and backcountry maps.
-- GoSki PRO: Ski Tracker, 3D trail maps everywhere, full 6-day forecast, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
+- Free: snow reports, the 7-day forecast, Ski Tracker Basic (runs, vertical, distance, average and top speed, time, altitude), snowfall maps and the Snow leaderboard (U.S.), 2D trail maps of every resort plus 3 free 3D maps (24 hours each), Live Lift Status, the Snow Alert, each storm's first alert, ski news, Food & Apres Ski, ski pass calendars, lift ticket links and backcountry maps.
+- GoSki PRO: Ski Tracker PLUS (runs on the trail map, speed heat map, live playback, graphs, trail-by-trail breakdown), 3D trail maps everywhere, Satellite Overlay (aerial photo on the 3D map, online and offline, 59 resorts), Mountain Intel (Wind, Powder Zone, Sun, Snow depth, Surface Conditions), Live Radar, text message alerts, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
 - Ski Tracker: one-tap start, the resort is recognized automatically, steady barometer-backed vertical, lift rides never counted as vertical, runs named by trail and drawn on GoSki's trail map, speed heat map, elevation and speed graphs, works without cell signal, recordings encrypted on the iPhone and never uploaded.
 - Weather: high-quality forecasts from trusted sources: NOAA and the National Weather Service (U.S.), NOAA with Environment Canada weather alerts (Canada). Snowfall maps and the Snow leaderboard use NOAA snowfall data.
 - Conditions on the 3D trail map: wind, powder, sun, snow depth and how soft the snow is, hour by hour through the week (GoSki PRO). Wind: How windy it is on every slope, and where it's calm. Powder Zone: Where the wind piled up fresh snow after a storm. Sun: Which runs are in the sun and which are in the shade, hour by hour. Snow depth: How much snow is on the ground, how much just fell and how much is coming. Surface Conditions: Where the snow is firm, soft or heavy through the day, and where to ski when.
@@ -31,7 +31,6 @@ Key facts (updated 2026-11-16):
 - [What's New](https://goskiapp.com/whats-new/): the latest updates
 - [Why ski tracker numbers differ](https://goskiapp.com/guides/ski-tracker-accuracy/): what vertical means, why GPS height drifts and what to look for in a tracker
 - [What to look for in a ski app](https://goskiapp.com/guides/choosing-a-ski-app/): a checklist for choosing a ski tracker and resort app
-- [GoSki Stories](https://goskiapp.com/stories/): stories about snow science and ski resorts, starting with how resorts save last winter's snow under sawdust
 
 ## Resorts
 
