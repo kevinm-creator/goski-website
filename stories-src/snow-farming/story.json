@@ -21,15 +21,6 @@
       "href": "/resorts/banff-sunshine/"
     },
     {
-      "img": "3d-lake-louise.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Lake Louise",
-      "caption": "One of the biggest ski areas in Canada, across the valley from the lake.",
-      "alt": "Lake Louise 3D trail map in the GoSki app",
-      "href": "/resorts/lake-louise/"
-    },
-    {
       "img": "/assets/screens/map-lake-louise-terrain-closeup-v1.webp",
       "width": 720,
       "height": 1561,
@@ -39,12 +30,12 @@
       "href": "/resorts/lake-louise/"
     },
     {
-      "img": "3d-killington.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Killington",
-      "caption": "The East's biggest ski area and a regular in the race to open first.",
-      "alt": "Killington 3D trail map in the GoSki app",
+      "img": "/assets/screens/map-killington-split-v1.webp",
+      "width": 720,
+      "height": 1561,
+      "title": "Regular or satellite",
+      "caption": "Switch on Satellite Overlay to see the real mountain photo.",
+      "alt": "Killington 3D map in the GoSki app, left half the regular map, right half with Satellite Overlay",
       "href": "/resorts/killington/"
     },
     {
@@ -73,24 +64,6 @@
       "caption": "Every trail and lift over the satellite photo.",
       "alt": "Killington trail map from above with Satellite Overlay in the GoSki app",
       "href": "/resorts/killington/"
-    },
-    {
-      "img": "3d-mt-norquay.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Mt. Norquay",
-      "caption": "Banff's town hill, a few minutes from downtown.",
-      "alt": "Mt. Norquay 3D trail map in the GoSki app",
-      "href": "/resorts/mt-norquay/"
-    },
-    {
-      "img": "3d-arapahoe-basin.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Arapahoe Basin",
-      "caption": "Colorado ski area that is usually one of the first in the US to open.",
-      "alt": "Arapahoe Basin 3D trail map in the GoSki app",
-      "href": "/resorts/arapahoe-basin/"
     }
   ]
 }
