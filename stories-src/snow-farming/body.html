@@ -21,53 +21,59 @@
     <title id="sawdust-title">How wet sawdust keeps a snow pile through summer</title>
     <desc id="sawdust-desc">A cross-section of a snow pile under a 40 centimeter layer of wet sawdust. The sun heats the wet sawdust, water evaporating from it carries the heat away, meltwater wicks back up and keeps it wet, and the snow underneath gets about twelve times less heat.</desc>
     <defs>
-      <linearGradient id="sd-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13284a"/><stop offset="1" stop-color="#0c1a2e"/></linearGradient>
-      <linearGradient id="sd-snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fbff"/><stop offset="1" stop-color="#d6e6f7"/></linearGradient>
-      <pattern id="sd-chips" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#8f5f31"/><ellipse cx="4" cy="5" rx="2.6" ry="1.3" fill="#6b4421"/><ellipse cx="12" cy="11" rx="2.2" ry="1.1" fill="#b98448"/><circle cx="11" cy="3" r="1" fill="#5c3a1c"/><circle cx="3" cy="13" r="1.1" fill="#c9965a"/></pattern>
-      <marker id="sd-sun-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
-      <marker id="sd-blue-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
-      <marker id="sd-vap-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#bae6fd"/></marker>
-      <marker id="sd-heat-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+      <linearGradient id="sd-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11223d"/><stop offset="1" stop-color="#0a1527"/></linearGradient>
+      <radialGradient id="sd-glow" cx="70" cy="68" r="150" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbbf24" stop-opacity=".30"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+      <linearGradient id="sd-ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d192c"/><stop offset="1" stop-color="#08101e"/></linearGradient>
+      <linearGradient id="sd-dust" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a7150"/><stop offset="1" stop-color="#5f4431"/></linearGradient>
+      <linearGradient id="sd-snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f6fc"/><stop offset="1" stop-color="#bfd1e6"/></linearGradient>
+      <pattern id="sd-grain" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1" fill="#3b2a1d" fill-opacity=".45"/><circle cx="9" cy="9" r=".9" fill="#e8c9a3" fill-opacity=".28"/><circle cx="10" cy="2" r=".7" fill="#3b2a1d" fill-opacity=".35"/></pattern>
+      <marker id="sd-head-sun" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L10 5L0 10L2.5 5z" fill="#fbbf24"/></marker>
+      <marker id="sd-head-vap" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L10 5L0 10L2.5 5z" fill="#bae6fd"/></marker>
+      <marker id="sd-head-water" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L10 5L0 10L2.5 5z" fill="#38bdf8"/></marker>
+      <marker id="sd-head-heat" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L10 5L0 10L2.5 5z" fill="#fb923c"/></marker>
     </defs>
-    <rect width="600" height="520" rx="18" fill="url(#sd-sky)"/>
-    <path d="M0 400H600V502a18 18 0 0 1-18 18H18a18 18 0 0 1-18-18z" fill="#173a26"/>
-    <path d="M0 400H600" stroke="#2f6b45" stroke-width="3"/>
-    <!-- the pile: sawdust layer over the snow -->
-    <path d="M40 400C120 250 220 175 300 172C380 175 480 250 560 400Z" fill="url(#sd-chips)"/>
+    <rect x="1" y="1" width="598" height="518" rx="22" fill="url(#sd-sky)"/>
+    <rect x="1" y="1" width="598" height="518" rx="22" fill="url(#sd-glow)"/>
+    <path d="M1 400H599V497a22 22 0 0 1-22 22H23a22 22 0 0 1-22-22z" fill="url(#sd-ground)"/>
+    <path d="M1 400H599" stroke="#94a3b8" stroke-opacity=".28" stroke-width="1.5"/>
+    <!-- the pile: wet sawdust over the snow -->
+    <path d="M40 400C120 250 220 175 300 172C380 175 480 250 560 400Z" fill="url(#sd-dust)"/>
+    <path d="M40 400C120 250 220 175 300 172C380 175 480 250 560 400Z" fill="url(#sd-grain)"/>
+    <path d="M40 400C120 250 220 175 300 172C380 175 480 250 560 400" fill="none" stroke="#f3d9b8" stroke-opacity=".35" stroke-width="1.5"/>
     <path d="M82 400C150 280 235 222 300 220C365 222 450 280 518 400Z" fill="url(#sd-snow)"/>
     <!-- sun and its heat -->
-    <g stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round">
-      <path d="M70 26V16M70 120V110M28 68H18M122 68H112M40 38l-7-7M100 98l7 7M40 98l-7 7M100 38l7-7"/>
-    </g>
-    <circle cx="70" cy="68" r="27" fill="#fbbf24"/>
-    <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round" fill="none" marker-end="url(#sd-sun-head)">
+    <circle cx="70" cy="68" r="24" fill="#fbbf24"/>
+    <circle cx="70" cy="68" r="33" fill="none" stroke="#fbbf24" stroke-opacity=".25" stroke-width="2"/>
+    <g stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round" fill="none" marker-end="url(#sd-head-sun)">
       <path d="M96 104L160 213"/><path d="M110 96L212 180"/><path d="M124 86L252 164"/>
     </g>
-    <text x="134" y="58" fill="#fde68a" font-size="22" font-weight="700">Sun heats the</text>
-    <text x="134" y="84" fill="#fde68a" font-size="22" font-weight="700">wet sawdust</text>
-    <!-- evaporation -->
-    <g stroke="#bae6fd" stroke-width="3.5" stroke-linecap="round" fill="none" marker-end="url(#sd-vap-head)">
+    <!-- water evaporating and carrying the heat away -->
+    <g stroke="#bae6fd" stroke-width="2.5" stroke-linecap="round" fill="none" marker-end="url(#sd-head-vap)">
       <path d="M340 166c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/><path d="M380 182c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/><path d="M428 214c-10-11 10-22 0-33c-10-9 0-20 0-27v-6"/>
     </g>
-    <text x="585" y="58" fill="#bae6fd" font-size="22" font-weight="700" text-anchor="end">Water evaporates and</text>
-    <text x="585" y="84" fill="#bae6fd" font-size="22" font-weight="700" text-anchor="end">carries the heat away</text>
-    <!-- meltwater wicking back up into the chips -->
-    <g stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" fill="none" marker-end="url(#sd-blue-head)">
-      <path d="M435 280L450 262"/><path d="M458 303L476 291"/><path d="M481 330L502 322"/>
-      <path d="M165 280L150 262"/><path d="M142 303L124 291"/>
+    <!-- meltwater wicking back up into the sawdust -->
+    <g stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" fill="none" marker-end="url(#sd-head-water)">
+      <path d="M435 280L450 262"/><path d="M458 303L476 291"/><path d="M481 330L502 322"/><path d="M165 280L150 262"/><path d="M142 303L124 291"/>
     </g>
-    <path d="M512 430L497 346" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 5"/>
-    <text x="585" y="452" fill="#7dd3fc" font-size="22" font-weight="700" text-anchor="end">Meltwater wicks back up</text>
-    <text x="585" y="478" fill="#7dd3fc" font-size="22" font-weight="700" text-anchor="end">and keeps it wet</text>
-    <!-- the layer -->
-    <path d="M62 430L100 340" stroke="#e7c08f" stroke-width="2" stroke-dasharray="4 5"/>
-    <text x="18" y="452" fill="#f0d2a8" font-size="22" font-weight="700">40 cm of</text>
-    <text x="18" y="478" fill="#f0d2a8" font-size="22" font-weight="700">wet sawdust</text>
-    <!-- only a trickle of heat gets through -->
-    <path d="M300 142V232" stroke="#fb923c" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round" marker-end="url(#sd-heat-head)"/>
-    <text x="300" y="300" fill="#0f172a" font-size="26" font-weight="800" text-anchor="middle">Snow</text>
-    <text x="300" y="332" fill="#1e3a5f" font-size="21" font-weight="700" text-anchor="middle">gets about 12×</text>
-    <text x="300" y="358" fill="#1e3a5f" font-size="21" font-weight="700" text-anchor="middle">less heat</text>
+    <!-- the little heat that gets through -->
+    <path d="M300 142V230" stroke="#fb923c" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#sd-head-heat)"/>
+    <!-- leaders -->
+    <g stroke="#94a3b8" stroke-opacity=".55" stroke-width="1.5" fill="none"><path d="M60 428L98 344"/><path d="M522 428L500 348"/></g>
+    <g fill="#cbd5e1"><circle cx="98" cy="344" r="3"/><circle cx="500" cy="348" r="3"/></g>
+    <!-- labels -->
+    <g font-size="21" font-weight="600" fill="#e2e8f0">
+      <text x="128" y="58"><tspan fill="#fbbf24">Sun</tspan> heats the</text>
+      <text x="128" y="84">wet sawdust</text>
+      <text x="582" y="58" text-anchor="end"><tspan fill="#7dd3fc">Water evaporates</tspan> and</text>
+      <text x="582" y="84" text-anchor="end">carries the heat away</text>
+      <text x="22" y="452"><tspan fill="#e7c39a">40 cm</tspan> of</text>
+      <text x="22" y="478">wet sawdust</text>
+      <text x="578" y="452" text-anchor="end"><tspan fill="#38bdf8">Meltwater</tspan> wicks back up</text>
+      <text x="578" y="478" text-anchor="end">and keeps it wet</text>
+    </g>
+    <text x="300" y="302" fill="#0f172a" font-size="25" font-weight="800" text-anchor="middle">Snow</text>
+    <text x="300" y="332" fill="#334155" font-size="20" font-weight="600" text-anchor="middle">gets about <tspan fill="#c2410c" font-weight="800">12×</tspan></text>
+    <text x="300" y="356" fill="#334155" font-size="20" font-weight="600" text-anchor="middle">less heat</text>
   </svg>
   <figcaption>The sun's heat goes into drying the sawdust instead of melting the snow. Based on SLF's measurements of covered piles in Davos and South Tyrol.</figcaption>
 </figure>
@@ -81,14 +87,14 @@
 <!-- AD -->
 
 <h2>Where it happens</h2>
-<h3>Levi and Ruka, Finland</h3>
-<p>The two Lapland resorts have turned snow farming into an October tradition. Both opened the 2026–27 season on October 2. Levi stored close to 300,000 cubic meters of snow from the 2024–25 winter and says it has invested nearly €1 million in snow farming material. The stored snow also secures its early-season World Cup slalom. Ruka began experimenting with stored snow in the late 1990s. Sawdust is the messiest cover but keeps around 80 percent of the snow, while white fabric is easier to handle and can lose up to 40 percent.</p>
-
-<h3>Kitzbühel, Austria</h3>
-<p>Kitzbühel keeps a depot of around 30,000 cubic meters at the Resterhöhe, pushed together by groomers right after the season and wrapped in foil and white fleece. In October 2019 it spread the snow into a strip about 700 meters long down an otherwise green mountain. Photos of that white line in the grass went around the world, and environmental groups criticized it. Josef Burger, head of the Kitzbühel lift company, answered: “I can understand that a white track in the middle of grass is not to everyone's liking, but what we do is ecologically and economically relevant.” The resort has since cut back to a single depot, and this season it planned to open on November 6.</p>
-
-<h3>Canmore Nordic Centre, Alberta</h3>
-<p>North America's best-known example is Frozen Thunder at the Canmore Nordic Centre, which has used stored snow since 2009. Crews make snow from January to March, cover it with half a meter of sawdust in April or May, and roll it out in October. Skiing starts as early as mid-October, and national ski teams use it for their first on-snow training of the year. The Craftsbury Outdoor Center in Vermont and Baldy Mountain in British Columbia store snow the same way.</p>
+<p>Stored snow pays off where an early opening or a fixed race date matters more than the cost.</p>
+<ul class="story-places">
+  <li><strong>Levi and Ruka, Finland</strong> Both opened the 2026–27 season on October 2 on last winter's snow. Levi stores close to 300,000 cubic meters, which also secures its early-season World Cup slalom.</li>
+  <li><strong>Davos, Switzerland</strong> Its pile becomes a four-kilometer cross-country trail at the end of October.</li>
+  <li><strong>Kitzbühel, Austria</strong> A 30,000 cubic meter depot under foil and white fleece lets it open in early November. Its white strip down a green mountain in 2019 drew criticism from environmental groups.</li>
+  <li><strong>Canmore Nordic Centre, Alberta</strong> Frozen Thunder has used stored snow since 2009 for a cross-country trail that opens as early as mid-October, where national teams get their first on-snow training of the year.</li>
+</ul>
+<p>The Craftsbury Outdoor Center in Vermont and Baldy Mountain in British Columbia store snow the same way.</p>
 
 <!-- AD -->
 
@@ -96,18 +102,6 @@
 <p>Snow farming is not free. A well-covered pile still loses a fifth to a third of its snow, more under a thin cover, and someone has to move and dispose of tons of wet sawdust. But snow made in January is far cheaper than snow made during a warm November, and a stored pile does not care whether autumn turns cold on time. For a resort that needs to open on a fixed date, or a race that cannot move, that certainty is the point.</p>
 <p>Whether a white ribbon on a green mountain looks like smart resource management or a warning sign depends a lot on who you ask.</p>
 
-<section class="story-3d" aria-labelledby="see-3d">
-  <h2 id="see-3d">See these mountains in 3D</h2>
-  <p>Canmore's stored-snow track sits a short drive from Banff, and all three Banff-area ski areas are in GoSki as full 3D trail maps. So are the US resorts that fight to open first every fall. Spin the terrain, follow a run from the lift to the base, and see exactly how steep it is before you go.</p>
-  <div class="story-phones">
-    <a class="story-phone" href="/resorts/banff-sunshine/"><img src="3d-banff-sunshine.jpg" width="645" height="1398" loading="lazy" alt="Banff Sunshine Village 3D trail map in the GoSki app"><strong>Banff Sunshine Village</strong><span>Gondola to three mountains on the Continental Divide.</span></a>
-    <a class="story-phone" href="/resorts/lake-louise/"><img src="3d-lake-louise.jpg" width="645" height="1398" loading="lazy" alt="Lake Louise 3D trail map in the GoSki app"><strong>Lake Louise</strong><span>One of the biggest ski areas in Canada, across the valley from the lake.</span></a>
-    <a class="story-phone" href="/resorts/mt-norquay/"><img src="3d-mt-norquay.jpg" width="645" height="1398" loading="lazy" alt="Mt. Norquay 3D trail map in the GoSki app"><strong>Mt. Norquay</strong><span>Banff's town hill, a few minutes from downtown.</span></a>
-    <a class="story-phone" href="/resorts/arapahoe-basin/"><img src="3d-arapahoe-basin.jpg" width="645" height="1398" loading="lazy" alt="Arapahoe Basin 3D trail map in the GoSki app"><strong>Arapahoe Basin</strong><span>Colorado ski area that is usually one of the first in the US to open.</span></a>
-    <a class="story-phone" href="/resorts/killington/"><img src="3d-killington.jpg" width="645" height="1398" loading="lazy" alt="Killington 3D trail map in the GoSki app"><strong>Killington</strong><span>The East's biggest ski area and a regular in the race to open first.</span></a>
-  </div>
-  <p>GoSki also shows the past 48 hours of snowfall and the next 48 hours of forecast snow at your mountains, live lift and trail status, and Storm Alerts when a big storm is lining up.</p>
-</section>
 
 <section class="story-sources" aria-labelledby="sources">
   <h2 id="sources">Sources</h2>

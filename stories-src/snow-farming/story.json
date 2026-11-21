@@ -8,5 +8,71 @@
   "og_image_width": 1200,
   "og_image_height": 630,
   "card_image": "img-snow-pile.jpg",
-  "card_image_alt": "A tall pile of stored snow under a thick layer of sawdust in a green alpine meadow"
+  "card_image_alt": "A tall pile of stored snow under a thick layer of sawdust in a green alpine meadow",
+  "tour_maps_lead": "Canmore's stored-snow track sits a short drive from Banff, and all three Banff-area ski areas are in GoSki as full 3D trail maps. So are the US resorts that race to open first every fall.",
+  "tour_maps": [
+    {
+      "img": "3d-banff-sunshine.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Banff Sunshine Village",
+      "caption": "Gondola to three mountains on the Continental Divide.",
+      "alt": "Banff Sunshine Village 3D trail map in the GoSki app",
+      "href": "/resorts/banff-sunshine/"
+    },
+    {
+      "img": "3d-lake-louise.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Lake Louise",
+      "caption": "One of the biggest ski areas in Canada, across the valley from the lake.",
+      "alt": "Lake Louise 3D trail map in the GoSki app",
+      "href": "/resorts/lake-louise/"
+    },
+    {
+      "img": "3d-killington.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Killington",
+      "caption": "The East's biggest ski area and a regular in the race to open first.",
+      "alt": "Killington 3D trail map in the GoSki app",
+      "href": "/resorts/killington/"
+    },
+    {
+      "img": "/assets/screens/map-killington-satellite-3d-v1.webp",
+      "width": 720,
+      "height": 1558,
+      "title": "Killington, Satellite Overlay",
+      "caption": "The real mountain photo on the 3D map.",
+      "alt": "Killington 3D trail map with Satellite Overlay in the GoSki app",
+      "href": "/resorts/killington/"
+    },
+    {
+      "img": "/assets/screens/map-killington-satellite-top-v1.webp",
+      "width": 720,
+      "height": 1558,
+      "title": "Killington from above",
+      "caption": "Every trail and lift over the satellite photo.",
+      "alt": "Killington trail map from above with Satellite Overlay in the GoSki app",
+      "href": "/resorts/killington/"
+    },
+    {
+      "img": "3d-mt-norquay.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Mt. Norquay",
+      "caption": "Banff's town hill, a few minutes from downtown.",
+      "alt": "Mt. Norquay 3D trail map in the GoSki app",
+      "href": "/resorts/mt-norquay/"
+    },
+    {
+      "img": "3d-arapahoe-basin.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Arapahoe Basin",
+      "caption": "Colorado ski area that is usually one of the first in the US to open.",
+      "alt": "Arapahoe Basin 3D trail map in the GoSki app",
+      "href": "/resorts/arapahoe-basin/"
+    }
+  ]
 }
