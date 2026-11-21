@@ -27,7 +27,7 @@ SRC = ROOT / "stories-src"
 OUT = ROOT / "stories"
 SITE = "https://goskiapp.com"
 CSS_VERSION = "20261116"
-STORIES_CSS_VERSION = "20261120b"  # bump when stories/stories.css changes
+STORIES_CSS_VERSION = "20261121"  # bump when stories/stories.css changes
 
 
 def load_shell():
@@ -129,6 +129,10 @@ TOUR = [
      "Every trail and lift on real 3D terrain. Spin, tilt and zoom to see how steep a run is before you ride it.",
      [("map-killington-3d-v2.webp", 720, 1561, "Killington, Vermont", "Trails, lifts and lodges on the 3D map.",
        "Killington 3D trail map in the GoSki app"),
+      ("map-killington-satellite-3d-v1.webp", 720, 1558, "Satellite Overlay", "The real mountain photo on the 3D map.",
+       "Killington 3D trail map with Satellite Overlay in the GoSki app"),
+      ("map-killington-satellite-top-v1.webp", 720, 1558, "From above", "Every trail and lift over the satellite photo.",
+       "Killington trail map from above with Satellite Overlay in the GoSki app"),
       ("map-stowe-3d-v2.webp", 720, 1561, "Stowe, Vermont", "Tilt and turn the mountain to read the fall line.",
        "Stowe 3D trail map in the GoSki app")]),
     ("track", "Professional Telemetry & Ski Track", "/ski-tracker/", "How the Ski Tracker works",
@@ -176,6 +180,7 @@ TOUR_SCRIPT = """<script>
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
     if (focus) tab.focus();
+    document.getElementById(tab.getAttribute('aria-controls')).dispatchEvent(new Event('tour:shown'));
   }
   tabs.forEach(function (t, i) {
     t.addEventListener('click', function () { show(t); });
@@ -187,11 +192,50 @@ TOUR_SCRIPT = """<script>
     });
   });
   show(tabs[0]);
+
+  // Swipe dots: when a row of screens is wider than the page, one dot per screen shows where you are,
+  // and tapping a dot scrolls to that screen.
+  [].slice.call(document.querySelectorAll('.tour-panel')).forEach(function (panel) {
+    var row = panel.querySelector('.tour-phones'), dots = panel.querySelector('.tour-dots');
+    var items = [].slice.call(row.children);
+    items.forEach(function (item, n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show screen ' + (n + 1) + ' of ' + items.length);
+      b.addEventListener('click', function () { row.scrollTo({ left: item.offsetLeft - items[0].offsetLeft, behavior: 'smooth' }); });
+      dots.appendChild(b);
+    });
+    function update() {
+      dots.hidden = row.scrollWidth <= row.clientWidth + 4;
+      // The current screen is the one at the row's left edge (the end of the row counts as the last screen).
+      var max = row.scrollWidth - row.clientWidth, best = 0, bestD = Infinity;
+      items.forEach(function (item, n) {
+        var d = Math.abs(item.offsetLeft - items[0].offsetLeft - row.scrollLeft);
+        if (d < bestD) { bestD = d; best = n; }
+      });
+      if (row.scrollLeft >= max - 2) best = items.length - 1;
+      [].forEach.call(dots.children, function (b, n) { b.setAttribute('aria-current', n === best ? 'true' : 'false'); });
+    }
+    row.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    panel.addEventListener('tour:shown', update);
+    update();
+  });
 })();
 </script>"""
 
 
-def tour_section():
+def tour_phone(src, w, h, title, cap, alt, href=None):
+    img = f'<img src="{src}" width="{w}" height="{h}" loading="lazy" alt="{esc(alt)}">'
+    text = f'<strong>{esc(title)}</strong>{esc(cap)}'
+    if href:
+        return f'<a class="tour-phone" href="{href}">{img}<span class="tour-phone__cap">{text}</span></a>'
+    return f'<figure class="tour-phone">{img}<figcaption>{text}</figcaption></figure>'
+
+
+def tour_section(slug, meta):
+    """The button section. A story can put its own resorts in the 3D tab with
+    "tour_maps" (and "tour_maps_lead") in story.json; otherwise TOUR's screens are used."""
     buttons, panels = [], []
     for i, (key, label, href, more, icon, lead, shots) in enumerate(TOUR):
         on = i == 0
@@ -199,14 +243,21 @@ def tour_section():
             f'<button type="button" class="tour-tab" role="tab" id="tour-tab-{key}" aria-controls="tour-{key}" '
             f'aria-selected="{"true" if on else "false"}" tabindex="{0 if on else -1}">'
             f'<svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg><span>{esc(label)}</span></button>')
-        phones = "".join(
-            f'<figure class="tour-phone"><img src="/assets/screens/{f}" width="{w}" height="{h}" loading="lazy" alt="{esc(alt)}">'
-            f'<figcaption><strong>{esc(title)}</strong>{esc(cap)}</figcaption></figure>'
-            for f, w, h, title, cap, alt in shots)
+        if key == "maps" and meta.get("tour_maps"):
+            lead = meta.get("tour_maps_lead", lead)
+            phones = "".join(
+                tour_phone(m["img"] if m["img"].startswith("/") else f'/stories/{slug}/{m["img"]}',
+                           m.get("width", 645), m.get("height", 1398),
+                           m["title"], m["caption"], m["alt"], m.get("href"))
+                for m in meta["tour_maps"])
+        else:
+            phones = "".join(tour_phone(f"/assets/screens/{f}", w, h, title, cap, alt)
+                             for f, w, h, title, cap, alt in shots)
         panels.append(
             f'<div class="tour-panel" id="tour-{key}" role="tabpanel" aria-labelledby="tour-tab-{key}" tabindex="0">'
             f'<p class="tour-panel__lead">{esc(lead)}</p>'
             f'<div class="tour-phones">{phones}</div>'
+            f'<div class="tour-dots" hidden></div>'
             f'<a class="tour-more" href="{href}">{esc(more)} <span aria-hidden="true">→</span></a></div>')
     return f"""<section class="section story-tour" aria-labelledby="tour-title">
       <div class="wrap">
@@ -228,6 +279,9 @@ def build_story(slug, meta, body, site, top, bottom):
     image = f"{SITE}/stories/{slug}/{meta['og_image']}"
     ad = ad_slot(site)
     body = body.replace("<!-- AD -->", ad)
+    # The button section goes right after the article, above its Sources (Kevin, 2026-11-21).
+    cut = body.find('<section class="story-sources"')
+    main, sources = (body[:cut], body[cut:]) if cut >= 0 else (body, "")
     trail = [("Home", "/"), ("Stories", "/stories/"), (meta["title"], f"/stories/{slug}/")]
     ld = {"@context": "https://schema.org", "@graph": [
         breadcrumb_ld(trail),
@@ -256,7 +310,15 @@ def build_story(slug, meta, body, site, top, bottom):
       <div class="section story-section">
         <div class="wrap wrap--narrow">
           <div class="prose story-body">
-{body}
+{main}
+          </div>
+        </div>
+      </div>
+      {tour_section(slug, meta)}
+      <div class="section story-section story-end">
+        <div class="wrap wrap--narrow">
+          <div class="prose story-body">
+{sources}
           </div>
           {stories_footer_note()}
         </div>
@@ -264,7 +326,6 @@ def build_story(slug, meta, body, site, top, bottom):
     </article>
 
     """
-    page += tour_section()
     page += bottom
     dest = OUT / slug / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)

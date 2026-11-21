@@ -12,6 +12,11 @@
 .story-hero img, .story-figure img { display: block; width: 100%; height: auto; border-radius: 16px; }
 .story-hero figcaption, .story-figure figcaption { margin-top: 10px; color: var(--slate-400); font-size: .88rem; line-height: 1.5; }
 
+.story-places { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.prose .story-places li { position: relative; padding: 14px 16px 14px 40px; border: 1px solid var(--card-line); border-radius: 14px; background: rgba(255, 255, 255, .035); font-size: 1.04rem; line-height: 1.6; }
+.story-places li::before { content: ""; position: absolute; left: 17px; top: 22px; width: 9px; height: 9px; border-radius: 50%; background: var(--sky-400); box-shadow: 0 0 0 4px rgba(56, 189, 248, .16); }
+.story-places strong { display: block; margin-bottom: 2px; }
+
 .story-diagram { max-width: 620px; margin-inline: auto; }
 .story-diagram svg { display: block; width: 100%; height: auto; font-family: inherit; }
 
@@ -57,10 +62,26 @@
 .tour-panel { max-width: 1120px; margin: 28px auto 0; }
 .tour-panel:focus-visible { outline: 2px solid var(--sky-400); outline-offset: 8px; border-radius: 12px; }
 .tour-panel__lead { max-width: 62ch; margin: 0 auto; color: var(--slate-300); font-size: 1.05rem; line-height: 1.6; text-align: center; }
-.tour-phones { display: flex; justify-content: center; gap: 18px; margin: 24px 0 0; padding: 4px 4px 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+/* A row that fits is centered; a row that doesn't scrolls from its first screen (justify-content: center would hide the
+   left end where it can't be scrolled to). overscroll-behavior keeps a sideways swipe from turning into "back". */
+.tour-phones { position: relative; display: flex; justify-content: flex-start; gap: 18px; margin: 24px 0 0; padding: 4px 4px 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.tour-phones::-webkit-scrollbar { display: none; }
+.tour-phones > :first-child { margin-left: auto; }
+.tour-phones > :last-child { margin-right: auto; }
+.tour-dots { display: flex; justify-content: center; gap: 2px; margin-top: 2px; }
+.tour-dots[hidden] { display: none; }
+.tour-dots button { display: grid; place-items: center; width: 26px; height: 26px; padding: 0; border: 0; background: none; cursor: pointer; }
+.tour-dots button::before { content: ""; width: 8px; height: 8px; border-radius: 99px; background: var(--slate-500); transition: width .2s, background .2s; }
+.tour-dots button[aria-current="true"]::before { width: 22px; background: var(--sky-400); }
+.tour-dots button:focus-visible { outline: 2px solid var(--sky-400); outline-offset: 0; border-radius: 99px; }
 .tour-phone { flex: 0 0 clamp(150px, 19vw, 206px); margin: 0; scroll-snap-align: center; color: var(--slate-400); font-size: .86rem; line-height: 1.4; }
 .tour-phone img { display: block; width: 100%; height: auto; margin-bottom: 10px; border: 5px solid #1e293b; border-radius: 26px; box-shadow: 0 12px 30px rgba(0, 0, 0, .45); }
 .tour-phone strong { display: block; color: var(--slate-50); font-size: .95rem; }
+a.tour-phone { text-decoration: none; }
+a.tour-phone:hover strong, a.tour-phone:focus-visible strong { color: var(--sky-400); }
+.tour-phone__cap { display: block; }
+.story-end { padding-top: clamp(8px, 2vw, 24px); }
+.story-end .story-sources { margin-top: 0; }
 .tour-more { display: table; margin: 14px auto 0; color: var(--sky-400); font-weight: 600; text-decoration: none; }
 .tour-more:hover, .tour-more:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
 .tour-note { margin-top: 26px; color: var(--slate-500); font-size: .85rem; text-align: center; }
