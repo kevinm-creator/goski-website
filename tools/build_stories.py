@@ -120,7 +120,8 @@ def stories_footer_note():
             '<a href="/ads-and-cookies/">Ads and cookies</a></p>')
 
 
-# The "See what GoSki does" section at the bottom of every story (Kevin, 2026-11-20).
+# The "See what GoSki does" section above every story's Sources (Kevin, 2026-11-20/21).
+# 3D tab order (Kevin, 2026-11-21): two regular screens, one half regular / half satellite, then satellite screens.
 # Big toggle buttons, in this order, each showing real app screens from /assets/screens/.
 # Each screen: (file, width, height, title, caption, alt).
 TOUR = [
@@ -129,12 +130,16 @@ TOUR = [
      "Every trail and lift on real 3D terrain. Spin, tilt and zoom to see how steep a run is before you ride it.",
      [("map-killington-3d-v2.webp", 720, 1561, "Killington, Vermont", "Trails, lifts and lodges on the 3D map.",
        "Killington 3D trail map in the GoSki app"),
+      ("map-lake-louise-terrain-closeup-v1.webp", 720, 1561, "3D terrain up close", "Zoom in and tilt to see how steep each run really is.",
+       "Close-up of Lake Louise's 3D terrain under Whitehorn Mountain in the GoSki app"),
+      ("map-killington-split-v1.webp", 720, 1561, "Regular or satellite", "Switch on Satellite Overlay to see the real mountain photo.",
+       "Killington 3D map in the GoSki app, left half the regular map, right half with Satellite Overlay"),
       ("map-killington-satellite-3d-v1.webp", 720, 1558, "Satellite Overlay", "The real mountain photo on the 3D map.",
        "Killington 3D trail map with Satellite Overlay in the GoSki app"),
+      ("map-killington-satellite-closeup-v1.webp", 720, 1561, "Satellite Overlay up close", "High-definition photo: every tree line, trail and lift line.",
+       "Close-up of Killington's Satellite Overlay photo with trails and lifts in the GoSki app"),
       ("map-killington-satellite-top-v1.webp", 720, 1558, "From above", "Every trail and lift over the satellite photo.",
-       "Killington trail map from above with Satellite Overlay in the GoSki app"),
-      ("map-stowe-3d-v2.webp", 720, 1561, "Stowe, Vermont", "Tilt and turn the mountain to read the fall line.",
-       "Stowe 3D trail map in the GoSki app")]),
+       "Killington trail map from above with Satellite Overlay in the GoSki app")]),
     ("track", "Professional Telemetry & Ski Track", "/ski-tracker/", "How the Ski Tracker works",
      '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
      "The Ski Tracker follows your day: vertical, speed, distance and time, with every run drawn on the resort map and matched to the trails you skied.",

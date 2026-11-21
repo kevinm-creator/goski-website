@@ -21,21 +21,21 @@
       "href": "/resorts/banff-sunshine/"
     },
     {
-      "img": "3d-lake-louise.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Lake Louise",
-      "caption": "One of the biggest ski areas in Canada, across the valley from the lake.",
-      "alt": "Lake Louise 3D trail map in the GoSki app",
+      "img": "/assets/screens/map-lake-louise-terrain-closeup-v1.webp",
+      "width": 720,
+      "height": 1561,
+      "title": "Lake Louise up close",
+      "caption": "Zoom in and tilt to see how steep each run really is.",
+      "alt": "Close-up of Lake Louise's 3D terrain under Whitehorn Mountain in the GoSki app",
       "href": "/resorts/lake-louise/"
     },
     {
-      "img": "3d-killington.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Killington",
-      "caption": "The East's biggest ski area and a regular in the race to open first.",
-      "alt": "Killington 3D trail map in the GoSki app",
+      "img": "/assets/screens/map-killington-split-v1.webp",
+      "width": 720,
+      "height": 1561,
+      "title": "Regular or satellite",
+      "caption": "Switch on Satellite Overlay to see the real mountain photo.",
+      "alt": "Killington 3D map in the GoSki app, left half the regular map, right half with Satellite Overlay",
       "href": "/resorts/killington/"
     },
     {
@@ -48,6 +48,15 @@
       "href": "/resorts/killington/"
     },
     {
+      "img": "/assets/screens/map-killington-satellite-closeup-v1.webp",
+      "width": 720,
+      "height": 1561,
+      "title": "Satellite Overlay up close",
+      "caption": "High-definition photo: every tree line, trail and lift line.",
+      "alt": "Close-up of Killington's Satellite Overlay photo with trails and lifts in the GoSki app",
+      "href": "/resorts/killington/"
+    },
+    {
       "img": "/assets/screens/map-killington-satellite-top-v1.webp",
       "width": 720,
       "height": 1558,
@@ -55,24 +64,6 @@
       "caption": "Every trail and lift over the satellite photo.",
       "alt": "Killington trail map from above with Satellite Overlay in the GoSki app",
       "href": "/resorts/killington/"
-    },
-    {
-      "img": "3d-mt-norquay.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Mt. Norquay",
-      "caption": "Banff's town hill, a few minutes from downtown.",
-      "alt": "Mt. Norquay 3D trail map in the GoSki app",
-      "href": "/resorts/mt-norquay/"
-    },
-    {
-      "img": "3d-arapahoe-basin.jpg",
-      "width": 645,
-      "height": 1398,
-      "title": "Arapahoe Basin",
-      "caption": "Colorado ski area that is usually one of the first in the US to open.",
-      "alt": "Arapahoe Basin 3D trail map in the GoSki app",
-      "href": "/resorts/arapahoe-basin/"
     }
   ]
 }
