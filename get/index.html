@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get GoSki | App Store and Google Play</title>
+  <meta name="description" content="GoSki for skiers and snowboarders: free on the App Store (iOS) and Google Play (Android).">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/icon-32.png">
+  <meta property="og:title" content="Get GoSki">
+  <meta property="og:description" content="Free on the App Store (iOS) and Google Play (Android).">
+  <meta property="og:image" content="https://goskiapp.com/assets/og-image-v2.png">
+  <meta property="og:url" content="https://goskiapp.com/get/">
+  <script>
+    // Phone-aware store link (used by GoSki's ads): an iPhone or iPad goes straight to the App Store,
+    // an Android phone straight to Google Play. Everyone else, or anyone whose redirect is blocked,
+    // sees both store badges below. Add ?stay to the URL to see the page without being sent on.
+    (function () {
+      var APP = 'https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548';
+      var PLAY = 'https://play.google.com/store/apps/details?id=com.GoSki.myapp';
+      var q = new URLSearchParams(location.search);
+      if (q.has('stay')) return;
+      var ua = navigator.userAgent || '';
+      var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var android = !ios && /Android/i.test(ua);
+      var dest = null;
+      if (ios) {
+        dest = APP;
+      } else if (android) {
+        // Google Play keeps utm_* tags passed in "referrer" for its acquisition reports.
+        var utm = [];
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+          var v = q.get(k);
+          if (v) utm.push(k + '=' + encodeURIComponent(v));
+        });
+        dest = PLAY + (utm.length ? '&referrer=' + encodeURIComponent(utm.join('&')) : '');
+      }
+      if (dest) {
+        document.documentElement.setAttribute('data-store', ios ? 'ios' : 'android');
+        location.replace(dest);
+      }
+    })();
+  </script>
+  <style>
+    @font-face { font-family: "Inter"; src: url("/fonts/inter-latin-wght.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+    html, body { min-height: 100%; margin: 0; }
+    body { display: grid; place-items: center; min-height: 100vh; padding: 24px 16px; box-sizing: border-box; background: linear-gradient(180deg, #020617, #070d2f 60%, #072348); color: #f8fafc; font-family: "Inter", system-ui, sans-serif; text-align: center; }
+    main { max-width: 440px; }
+    .icon { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 0 0 1px rgba(255,255,255,.12); }
+    h1 { margin: 24px 0 0; font-size: clamp(2.2rem, 8vw, 3.2rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
+    p { margin: 12px 0 0; color: #94a3b8; font-size: 1.1rem; line-height: 1.45; }
+    .opening { display: none; }
+    [data-store] .opening { display: block; }
+    [data-store] .lead { display: none; }
+    .store-badges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 16px; margin-top: 28px; }
+    .store-badge { display: inline-block; border-radius: 12px; }
+    .store-badge img { display: block; width: auto; height: 52px; }
+    .store-badge--play img { height: 77px; margin: -13px; }
+    .more { display: inline-block; margin-top: 26px; color: #93c5fd; font-weight: 600; text-decoration: none; }
+    .more:hover { text-decoration: underline; text-underline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="icon" src="/assets/icon/icon-180.png" width="88" height="88" alt="GoSki app icon">
+    <h1>Get GoSki</h1>
+    <p class="lead">For skiers and snowboarders. Free on the App Store (iOS) and Google Play (Android).</p>
+    <p class="opening">Opening your app store&hellip; If nothing happens, tap your store below.</p>
+    <div class="store-badges">
+      <a class="store-badge" href="https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?size=250x83" width="156" height="52" alt="Download on the App Store"></a>
+      <a class="store-badge store-badge--play" href="https://play.google.com/store/apps/details?id=com.GoSki.myapp"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="201" height="78" alt="Get it on Google Play"></a>
+    </div>
+    <a class="more" href="/trail-maps/">See the 3D trail maps &rarr;</a>
+  </main>
+</body>
+</html>
