@@ -17,7 +17,7 @@
     // an Android phone straight to Google Play. Everyone else, or anyone whose redirect is blocked,
     // sees both store badges below. Add ?stay to the URL to see the page without being sent on.
     (function () {
-      var APP = 'https://apps.apple.com/us/app/goski-ski-tracker-maps/id6759206548';
+      var APP = 'https://apps.apple.com/app/apple-store/id6759206548';
       var PLAY = 'https://play.google.com/store/apps/details?id=com.GoSki.myapp';
       var q = new URLSearchParams(location.search);
       if (q.has('stay')) return;
@@ -26,7 +26,11 @@
       var android = !ios && /Android/i.test(ua);
       var dest = null;
       if (ios) {
-        dest = APP;
+        // Apple's campaign link, so App Store Connect (App Analytics > Campaigns) counts App Store
+        // page views and downloads per ad: pt is GoSki's provider token, ct the campaign (the ad's
+        // utm_campaign, max 40 characters).
+        var ct = (q.get('utm_campaign') || 'goskiapp-get').replace(/[^A-Za-z0-9._-]/g, '-').slice(0, 40);
+        dest = APP + '?pt=127637101&ct=' + encodeURIComponent(ct) + '&mt=8';
       } else if (android) {
         // Google Play keeps utm_* tags passed in "referrer" for its acquisition reports.
         var utm = [];
