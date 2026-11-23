@@ -1,16 +1,18 @@
 # GoSki
 
-> GoSki ("GoSki: Ski Tracker & Maps" on the App Store and Google Play) is a free app for skiers and snowboarders on iPhone, iPad and Android. It has snow reports and hourly forecasts for 67 ski resorts in the U.S. and Canada, 2D and 3D trail maps of all 67, Live Lift Status backed by Real Time data, lift and storm alerts, and a GPS ski tracker that names every run by the trails it followed.
+> GoSki ("GoSki: Ski Tracker & Maps" on the App Store and Google Play) is a free app for skiers and snowboarders on iPhone, iPad and Android. It has hourly forecasts for 87 ski resorts in the U.S., Canada and the Alps, snow reports, 2D and 3D trail maps of all 87, Live Lift Status backed by Real Time data, lift and storm alerts, and a GPS ski tracker that names every run by the trails it followed.
 
-Key facts (updated 2026-11-16):
+Key facts (updated 2026-11-23):
 
 - Platforms: iPhone and iPad (App Store, iOS 15 or later) and Android phones (Google Play, Android 7.0 or later).
 - Price: free to download and use. GoSki PRO is an optional weekly or monthly subscription (prices shown in the app).
-- Resorts: 67 (54 U.S., 13 Canada). Every one has a GoSki trail map in 2D and 3D.
+- Resorts: 87 (54 U.S., 13 Canada, 20 in the Alps: 8 France, 5 Austria, 4 Italy, 3 Switzerland). Every one has a GoSki trail map in 2D and 3D.
+- The Alps: Zermatt, Chamonix-Mont-Blanc, Verbier, St. Anton am Arlberg, Courchevel, Val Thorens, Méribel, Cortina d'Ampezzo, Kitzbühel, St. Moritz, La Plagne, Les Arcs, Saalbach Skicircus, Val Gardena, Ischgl / Samnaun, SkiWelt, Via Lattea (Sestriere), Alpe d'Huez, Tignes, Alta Badia. Hourly forecasts at every one, snow and ice warnings, avalanche danger on the backcountry map, snow reports at 17, Live Lift Status at 16, Satellite Overlay at 17. The app switches between North America and the Alps.
+- Units: Auto (metric in the Alps, imperial in North America), Imperial or Metric, for the whole app and for alerts.
 - Free: snow reports, the 7-day forecast, Ski Tracker Basic (runs, vertical, distance, average and top speed, time, altitude), snowfall maps and the Snow leaderboard (U.S.), 2D trail maps of every resort plus 3 free 3D maps (24 hours each), Live Lift Status, the Snow Alert, each storm's first alert, ski news, Food & Apres Ski, ski pass calendars, lift ticket links and backcountry maps.
-- GoSki PRO: Ski Tracker PLUS (runs on the trail map, speed heat map, live playback, graphs, trail-by-trail breakdown), 3D trail maps everywhere, Satellite Overlay (aerial photo on the 3D map, online and offline, 59 resorts), Mountain Intel (Wind, Powder Zone, Sun, Snow depth, Surface Conditions), Live Radar, text message alerts, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
+- GoSki PRO: Ski Tracker PLUS (runs on the trail map, speed heat map, live playback, graphs, trail-by-trail breakdown), 3D trail maps everywhere, Satellite Overlay (aerial photo on the 3D map, online and offline, 76 resorts), Mountain Intel (Wind, Powder Zone, Sun, Snow depth, Surface Conditions), Live Radar, text message alerts, Day Alerts (lift holds, delays and closures backed by Real Time data, Resort Updates, 3 PM Apres), every part of Storm Alerts, 30-day snow and terrain trends.
 - Ski Tracker: one-tap start, the resort is recognized automatically, steady barometer-backed vertical, lift rides never counted as vertical, runs named by trail and drawn on GoSki's trail map, speed heat map, elevation and speed graphs, works without cell signal, recordings encrypted on the iPhone and never uploaded.
-- Weather: high-quality forecasts from trusted sources: NOAA and the National Weather Service (U.S.), NOAA with Environment Canada weather alerts (Canada). Snowfall maps and the Snow leaderboard use NOAA snowfall data.
+- Weather: high-quality forecasts from trusted sources: NOAA and the National Weather Service (U.S.), NOAA with Environment Canada weather alerts (Canada), Europe's national weather services (the Alps). Past snowfall maps and the Snow leaderboard use NOAA snowfall data (U.S. only).
 - Conditions on the 3D trail map: wind, powder, sun, snow depth and how soft the snow is, hour by hour through the week (GoSki PRO). Wind: How windy it is on every slope, and where it's calm. Powder Zone: Where the wind piled up fresh snow after a storm. Sun: Which runs are in the sun and which are in the shade, hour by hour. Snow depth: How much snow is on the ground, how much just fell and how much is coming. Surface Conditions: Where the snow is firm, soft or heavy through the day, and where to ski when.
 - Ski passes: add an Epic, Ikon, Indy or Mountain Collective pass to see covered resorts and blackout dates.
 - Sign-in: 6-digit email code or Sign in with Apple. No password.
@@ -22,11 +24,11 @@ Key facts (updated 2026-11-16):
 
 - [Features](https://goskiapp.com/features/): every GoSki feature in one list
 - [Ski Tracker](https://goskiapp.com/ski-tracker/): how the GPS ski tracker records, measures and names runs
-- [Trail Maps](https://goskiapp.com/trail-maps/): 2D and 3D trail maps of all 67 resorts, with trail and lift counts
+- [Trail Maps](https://goskiapp.com/trail-maps/): 2D and 3D trail maps of all 87 resorts, with trail and lift counts
 - [Conditions](https://goskiapp.com/conditions/): Wind, Powder Zone, Sun, Snow depth and Surface Conditions on the 3D trail map
 - [Alerts](https://goskiapp.com/alerts/): Day Alerts, Storm Alerts, Snow Alert and Resort Updates
 - [GoSki PRO](https://goskiapp.com/pro/): what's free and what's included with GoSki PRO
-- [Resorts](https://goskiapp.com/resorts/): all 67 resorts in GoSki
+- [Resorts](https://goskiapp.com/resorts/): all 87 resorts in GoSki
 - [FAQ](https://goskiapp.com/faq/): short answers about pricing, tracking, offline use and privacy
 - [What's New](https://goskiapp.com/whats-new/): the latest updates
 - [Why ski tracker numbers differ](https://goskiapp.com/guides/ski-tracker-accuracy/): what vertical means, why GPS height drifts and what to look for in a tracker
@@ -121,6 +123,38 @@ Key facts (updated 2026-11-16):
 ### Eastern Canada
 
 - [Tremblant](https://goskiapp.com/resorts/tremblant/): Mont-Tremblant, Quebec; GoSki trail map with 108 named trails and 11 lifts; passes: Ikon
+
+### Swiss Alps
+
+- [Zermatt](https://goskiapp.com/resorts/zermatt/): Zermatt, Switzerland; GoSki trail map with 134 named trails and 49 lifts; passes: Ikon
+- [Verbier](https://goskiapp.com/resorts/verbier/): Verbier, Switzerland; GoSki trail map with 97 named trails and 64 lifts; passes: Epic
+- [St. Moritz](https://goskiapp.com/resorts/st-moritz/): St. Moritz, Switzerland; GoSki trail map with 35 named trails and 20 lifts; passes: Ikon
+
+### French Alps
+
+- [Chamonix-Mont-Blanc](https://goskiapp.com/resorts/chamonix/): Chamonix, France; GoSki trail map with 85 named trails and 47 lifts; passes: Ikon, Mountain Collective
+- [Courchevel](https://goskiapp.com/resorts/courchevel/): Courchevel, France; GoSki trail map with 96 named trails and 43 lifts; passes: Epic
+- [Val Thorens](https://goskiapp.com/resorts/val-thorens/): Val Thorens, France; GoSki trail map with 80 named trails and 29 lifts; passes: Epic
+- [Méribel](https://goskiapp.com/resorts/meribel/): Méribel, France; GoSki trail map with 83 named trails and 37 lifts; passes: Epic
+- [La Plagne](https://goskiapp.com/resorts/la-plagne/): La Plagne, France; GoSki trail map with 124 named trails and 72 lifts
+- [Les Arcs](https://goskiapp.com/resorts/les-arcs/): Arc 1800, France; GoSki trail map with 105 named trails and 52 lifts; night skiing
+- [Alpe d'Huez](https://goskiapp.com/resorts/alpe-d-huez/): Alpe d'Huez, France; GoSki trail map with 108 named trails and 63 lifts; night skiing
+- [Tignes](https://goskiapp.com/resorts/tignes/): Tignes, France; GoSki trail map with 83 named trails and 35 lifts
+
+### Austrian Alps
+
+- [St. Anton am Arlberg](https://goskiapp.com/resorts/st-anton/): St. Anton, Austria; GoSki trail map with 78 named trails and 38 lifts; passes: Epic
+- [Kitzbühel](https://goskiapp.com/resorts/kitzbuehel/): Kitzbühel, Austria; GoSki trail map with 104 named trails and 58 lifts; passes: Ikon
+- [Saalbach Skicircus](https://goskiapp.com/resorts/saalbach/): Saalbach, Austria; GoSki trail map with 163 named trails and 70 lifts; night skiing
+- [Ischgl / Samnaun](https://goskiapp.com/resorts/ischgl/): Ischgl, Austria; GoSki trail map with 88 named trails and 45 lifts; passes: Ikon
+- [SkiWelt](https://goskiapp.com/resorts/skiwelt/): Söll, Austria; GoSki trail map with 167 named trails and 79 lifts; night skiing
+
+### Italian Alps
+
+- [Cortina d'Ampezzo](https://goskiapp.com/resorts/cortina-d-ampezzo/): Cortina, Italy; GoSki trail map with 61 named trails and 27 lifts; passes: Ikon
+- [Val Gardena](https://goskiapp.com/resorts/val-gardena/): Selva di Val Gardena, Italy; GoSki trail map with 173 named trails and 81 lifts; passes: Ikon
+- [Via Lattea (Sestriere)](https://goskiapp.com/resorts/via-lattea/): Sestriere, Italy; GoSki trail map with 244 named trails and 66 lifts; night skiing
+- [Alta Badia](https://goskiapp.com/resorts/alta-badia/): Corvara, Italy; GoSki trail map with 98 named trails and 51 lifts; passes: Ikon; night skiing
 
 ## Optional
 
