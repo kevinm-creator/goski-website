@@ -27,7 +27,7 @@ SRC = ROOT / "stories-src"
 OUT = ROOT / "stories"
 SITE = "https://goskiapp.com"
 CSS_VERSION = "20261116"
-STORIES_CSS_VERSION = "20261121"  # bump when stories/stories.css changes
+STORIES_CSS_VERSION = "20261126"  # bump when stories/stories.css changes
 
 
 def load_shell():
