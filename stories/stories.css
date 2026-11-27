@@ -93,3 +93,22 @@ a.tour-phone:hover strong, a.tour-phone:focus-visible strong { color: var(--sky-
   .tour-phones { justify-content: flex-start; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
   .tour-phone { flex-basis: min(220px, 60vw); scroll-snap-align: start; }
 }
+
+/* Opening-days table (stories/ski-resort-opening-days-2026), 2026-11-26 */
+.ot-key { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.ot-wrap { overflow-x: auto; margin: 0 -4px; }
+.ot-table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.35; }
+.ot-table th { text-align: left; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--slate-400); padding: 8px 6px; border-bottom: 1px solid var(--slate-700); }
+.ot-table td { padding: 9px 6px; border-bottom: 1px solid #ffffff14; vertical-align: top; }
+.ot-table td strong { font-weight: 650; }
+.prose .ot-table a { color: inherit; text-decoration: underline; text-decoration-color: var(--slate-600); text-underline-offset: 3px; }
+.ot-rg { color: var(--slate-400); font-size: 12px; font-weight: 600; margin-left: 2px; }
+.ot-day { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
+.ot-detail { color: var(--slate-400); font-size: 13px; }
+.ot-pill { display: inline-block; font-size: 12px; font-weight: 700; border-radius: 99px; padding: 1px 9px; margin-right: 4px; white-space: nowrap; border: 1.5px solid var(--slate-500); color: var(--slate-300); }
+.ot-open .ot-pill, .ot-pill.ot-open { background: #38bdf833; border-color: #38bdf8; color: #e0f2fe; }
+.ot-tg .ot-pill, .ot-pill.ot-tg { background: #f59e0b33; border-color: #f59e0b; color: #fef3c7; }
+.ot-set .ot-pill, .ot-pill.ot-set { background: #8494ab; border-color: #8494ab; color: #0b1220; }
+.ot-none .ot-pill, .ot-pill.ot-none { border-style: dashed; }
+.ot-none .ot-day { color: var(--slate-500); }
+.ot-note { color: var(--slate-400); font-size: 14px; }

@@ -1,0 +1,44 @@
+{
+  "title": "Every Ski Resort Opening Day for 2026–27, A to Z",
+  "description": "Opening days for 100 North American ski resorts, from the first chair in October to the last date set in December: who is open, who opens Thanksgiving weekend, and who got pushed back.",
+  "share_title": "When Does Your Mountain Open? 100 Ski Resorts, A to Z",
+  "share_description": "Every 2026–27 opening day in one list: who is already open, who opens Thanksgiving weekend, and who is still waiting on snow.",
+  "dek": "100 North American ski resorts, from the first chair in October to the last date set in December. Find yours, then see why Thanksgiving weekend is the big rush.",
+  "kicker": "Opening days",
+  "date": "2026-11-26",
+  "og_image": "og-image.jpg",
+  "og_image_width": 1200,
+  "og_image_height": 630,
+  "card_image": "img-big-rush.jpg",
+  "card_image_alt": "Bar chart of 2026–27 opening days for 100 North American ski resorts, with Thanksgiving weekend as the tallest stack",
+  "tour_maps_lead": "Arapahoe Basin opened North America's season, and it is in GoSki as a full 3D trail map, along with Lake Louise, Killington and the other mountains on this list that have a GoSki page.",
+  "tour_maps": [
+    {
+      "img": "/stories/snow-farming/3d-arapahoe-basin.jpg",
+      "width": 645,
+      "height": 1398,
+      "title": "Arapahoe Basin",
+      "caption": "First to open in North America this season, on Oct 28.",
+      "alt": "Arapahoe Basin 3D trail map in the GoSki app",
+      "href": "/resorts/arapahoe-basin/"
+    },
+    {
+      "img": "/assets/screens/map-lake-louise-terrain-closeup-v1.webp",
+      "width": 720,
+      "height": 1561,
+      "title": "Lake Louise up close",
+      "caption": "Zoom in and tilt to see how steep each run really is.",
+      "alt": "Close-up of Lake Louise's 3D terrain in the GoSki app",
+      "href": "/resorts/lake-louise/"
+    },
+    {
+      "img": "/assets/screens/map-killington-satellite-3d-v1.webp",
+      "width": 720,
+      "height": 1558,
+      "title": "Killington, Satellite Overlay",
+      "caption": "The real mountain photo on the 3D map.",
+      "alt": "Killington 3D trail map with Satellite Overlay in the GoSki app",
+      "href": "/resorts/killington/"
+    }
+  ]
+}
